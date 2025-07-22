@@ -1,0 +1,828 @@
+<!DOCTYPE html><!-- Last Published: Tue Jul 01 2025 16:15:32 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.tripleten.blog" data-wf-page="65e1a6b7f57db81aec83f398" data-wf-site="6053a5b7250a503b3254324e" lang="en">
+<!-- Mirrored from tripleten.com/blog/?974180c2_page=4 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Jul 2025 14:50:31 GMT -->
+<head><meta charset="utf-8"/><title>TripleTen Blog</title><meta content="Articles about work, skills, and careers in tech from the team and students of the TripleTen." name="description"/><meta content="TripleTen Blog" property="og:title"/><meta content="Articles about work, skills, and careers in tech from the team and students of the TripleTen." property="og:description"/><meta content="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/648888cce64065dc221f1282_tg_image_1106365471.jpeg" property="og:image"/><meta content="TripleTen Blog" property="twitter:title"/><meta content="Articles about work, skills, and careers in tech from the team and students of the TripleTen." property="twitter:description"/><meta content="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/648888cce64065dc221f1282_tg_image_1106365471.jpeg" property="twitter:image"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="../../cdn.prod.website-files.com/6053a5b7250a503b3254324e/css/practicum-blog.webflow.shared.6225df67e.min.css" rel="stylesheet" type="text/css"/><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="../../cdn.prod.website-files.com/6053a5b7250a503b3254324e/64898e9bb7a00eb3741bc161_favicon%20(3)%20(1).png" rel="shortcut icon" type="image/x-icon"/><link href="../../cdn.prod.website-files.com/6053a5b7250a503b3254324e/6489bfc830b2358744a8ffb2_favicon%20257.png" rel="apple-touch-icon"/><script type="text/javascript">!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.agent='plwebflow';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','../../connect.facebook.net/en_US/fbevents.js');fbq('init', '547361069369394');fbq('track', 'PageView');</script><!-- CookieYes (cookie management) (Dev USA team, ask Vladimir Rybakov, Kirill Yuldashev) -->
+<script type="text/javascript">
+(() => {
+    let maxRuns = 30;
+    const COOKIE_NAME = 'cookieyes-consent';
+    const timeout = 1000;
+
+    const _performCookieYesBannerAction = () => {
+        const isCookieDefined = () => {
+            const cookieString = document.cookie.split(';').find((cookie) => cookie.trim().startsWith(COOKIE_NAME));
+            if (!cookieString) return false;
+
+            const cookieValue = decodeURIComponent(cookieString.split('=')[1]);
+            const sectionsValues = cookieValue.split(',').map((section) => section.split(':')[1]);
+
+            return sectionsValues.every((value) => typeof value === 'string' && value.length > 0);
+        };
+
+        const cookieDefined = isCookieDefined();
+
+        console.debug(`${COOKIE_NAME} is ${cookieDefined ? 'found' : 'absent'}`);
+
+        if (!cookieDefined) {
+            if (typeof window.performBannerAction === 'function') {
+                try {
+                    console.debug(`Run performBannerAction`);
+                    window.performBannerAction('accept_all');
+                } catch (error) {
+                    console.error('Error calling performBannerAction:', error);
+                }
+            } else if (maxRuns > 0) {
+                console.log(`Wait for performBannerAction ${maxRuns}`);
+                maxRuns -= 1;
+                setTimeout(_performCookieYesBannerAction, timeout);
+            }
+        }
+    };
+
+    const _setCookieYesAction = () => {
+        if (
+            window.cookieyes &&
+            window.cookieyes._ckyConsentStore &&
+            typeof window.cookieyes._ckyConsentStore.set === 'function'
+        ) {
+            console.debug('Run setCookieYesAction');
+            window.cookieyes._ckyConsentStore.set('action', 'yes');
+            setTimeout(_performCookieYesBannerAction, timeout);
+        }
+    };
+
+    const injectCookieyesHandler = () => {
+        const checkInterval = setInterval(() => {
+            if (window.revisitCkyConsent) {
+                const button = document.querySelector('.cookieyes__action-button');
+                if (button) {
+                    button.addEventListener('click', window.revisitCkyConsent);
+                    clearInterval(checkInterval); // Stop checking after adding the event listener
+                }
+            }
+        }, 100);
+    };
+
+    window.onLoadCookieYes = () => {
+        injectCookieyesHandler();
+
+        if (
+            window.cookieyes &&
+            window.cookieyes._ckyConsentStore &&
+            typeof window.cookieyes._ckyConsentStore.set === 'function'
+        ) {
+            window.cookieyes._ckyConsentStore.set('action', 'yes');
+            setTimeout(_performCookieYesBannerAction, timeout);
+        } else {
+            setTimeout(_setCookieYesAction, 0);
+        }
+    };
+})();
+</script>
+<script id="cookieyes" type="text/javascript" src="../../cdn-cookieyes.com/client_data/944bc1da9db254352a095466/script.js" onload="onLoadCookieYes();"></script>
+
+<style>
+  .cky-modal.cky-modal,
+  .cky-modal .cky-audit-table .cky-cookie-des-table {
+    font-family: 'Suisse intl', Arial, sans-serif;
+  }
+</style>
+<!-- CookieYes (cookie management) (Dev USA team, ask Vladimir Rybakov, Kirill Yuldashev) -->
+
+<style>
+  body {
+  -moz-font-feature-settings: "liga" on;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "liga" on;
+  text-rendering: optimizeLegibility;
+}
+  .image-2{
+  	display: block !important;
+    visibility: visible !important;
+  }
+  pre {
+  	background-color: #f6f6f6;
+    padding: 12px;
+    border-radius: 5px;
+    overflow-x: scroll;
+  }
+  
+  .category-link,
+  .tag-profession {
+    /*box-shadow: 0px 1px 12px 2px rgba(36, 36, 36, 0.07);*/
+  }
+  
+  .image-2 {
+  	aspect-ratio: 1.75 / 1;
+	}
+  
+  code {
+  	/* color: #5c7726; */
+  }
+  
+  .faq__link {
+    padding: 5px 10px 3px;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 1px #1a1b22;
+    letter-spacing: 1px;
+  }
+  .display-none {
+  	display: none;
+  }
+  @media screen and (min-width: 991px) {
+    .prof-main-item:hover {
+      box-shadow: 0px 2px 32px 6px rgba(36, 36, 36, 0.07);
+    }
+    .prof-main-item:hover .prof-item-link {
+      color: #fff;
+      background-color: #1a1a1a;
+    }
+    .prof-arrow-path {
+      transition: fill 0.2s ease;
+    }
+    .prof-main-item:hover .prof-arrow-path {
+      fill: #fff;
+    }
+  }
+</style>
+
+<!-- Hubspot Forms Styles -->
+<style>
+.input {
+  display: block !important;
+}
+.input input {
+  color: #a6a6a6;
+  border: 1px solid #ebebeb;
+  border-radius: 14px;
+  height: 56px;
+  padding: 18px;
+  vertical-align: middle;
+  background-color: #fff;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1;
+  display: block;
+  margin-bottom: 8px;
+}
+.input input::placeholder {
+  color: #A6A6A6;
+}
+.input input:focus {
+  outline: none;
+}
+.hs-button.primary.large {
+  color: #fff;
+  background-color: #1a1a1a;
+  border: 2px solid #000;
+  border-radius: 12px;
+  width: 100%;
+  height: 56px;
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.no-list.hs-error-msgs.inputs-list {
+  font-weight: 400;
+  line-height: 30px;
+  list-style-type: none;
+  padding: 0;
+}
+.hs-error-msg.hs-main-font-element,
+.hs-main-font-element {
+  font-family: Suisse intl, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+}
+</style>
+
+<style>
+  @keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade{10%{transform:scale(1, 1)}35%{transform:scale(1, 1.7)}40%{transform:scale(1, 1.7)}50%{opacity:1}60%{transform:scale(1, 1)}100%{transform:scale(1, 1);opacity:0}}[data-language] code,[class^="lang"] code,pre [data-language],pre [class^="lang"]{opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";animation:fade-in 50ms ease-in-out 2s forwards}[data-language] code.rainbow,[class^="lang"] code.rainbow,pre [data-language].rainbow,pre [class^="lang"].rainbow{animation:none;transition:opacity 50ms ease-in-out}[data-language] code.loading,[class^="lang"] code.loading,pre [data-language].loading,pre [class^="lang"].loading{animation:none}[data-language] code.rainbow-show,[class^="lang"] code.rainbow-show,pre [data-language].rainbow-show,pre [class^="lang"].rainbow-show{opacity:1}pre{position:relative}pre.loading .preloader div{animation-play-state:running}pre.loading .preloader div:nth-of-type(1){background:#0081f5;animation:fade 1.5s 300ms linear infinite}pre.loading .preloader div:nth-of-type(2){background:#5000f5;animation:fade 1.5s 438ms linear infinite}pre.loading .preloader div:nth-of-type(3){background:#9000f5;animation:fade 1.5s 577ms linear infinite}pre.loading .preloader div:nth-of-type(4){background:#f50419;animation:fade 1.5s 715ms linear infinite}pre.loading .preloader div:nth-of-type(5){background:#f57900;animation:fade 1.5s 853ms linear infinite}pre.loading .preloader div:nth-of-type(6){background:#f5e600;animation:fade 1.5s 992ms linear infinite}pre.loading .preloader div:nth-of-type(7){background:#00f50c;animation:fade 1.5s 1130ms linear infinite}pre .preloader{position:absolute;top:12px;left:10px}pre .preloader div{width:12px;height:12px;border-radius:4px;display:inline-block;margin-right:4px;opacity:0;animation-play-state:paused;animation-fill-mode:forwards}pre{border:1px solid #ccc;word-wrap:break-word;padding:6px 10px;line-height:22px;margin-bottom:20px}pre code{border:0;padding:0;margin:0;border-radius:0}code{border:1px solid #eaeaea;margin:0px 2px;padding:0px 5px;font-size:14px}pre,code{font-family:Consolas, 'Liberation Mono', Courier, monospace;color:#333;background:#f8f8f8;border-radius:3px}pre,pre code{font-size:15px}pre .comment{color:#998}pre .support{color:#0086B3}pre .tag,pre .tag-name{color:navy}pre .keyword,pre .css-property,pre .vendor-fix,pre .sass,pre .class,pre .id,pre .css-value,pre .entity.function,pre .storage.function{font-weight:bold}pre .css-property,pre .css-value,pre .vendor-fix,pre .support.namespace{color:#333}pre .constant.numeric,pre .keyword.unit,pre .hex-color{font-weight:normal;color:#099}pre .entity.class{color:#458}pre .entity.id,pre .entity.function{color:#900}pre .attribute,pre .variable{color:teal}pre .string,pre .support.value{font-weight:normal;color:#d14}pre .regexp{color:#009926}
+</style>
+
+<meta name=“p:domain_verify” content=“8dde1ffde305a4a660f6b370c02f8988"/>
+
+<meta name="yandex-verification" content="c214653273af3e90" />
+<meta name="google-site-verification" content="pbK7z2fG9Gd9u9OEVZQVqJHdPIupETQ1giY-VQ9wmHY" />
+                                                                                        
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K8FSL8GC');</script>
+<!-- End Google Tag Manager -->   
+                                                                                           
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8FSL8GC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Google tag (gtag.js) (Performance USA team tag, ask Kornei or Max) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0S9V7R9M47"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0S9V7R9M47');
+</script>
+<script type="text/javascript" src="../usa-main/usa-landing-users.js"></script><link rel="alternate" href="https://tripleten.mx/blog/" hreflang="es-mx">
+<link rel="alternate" href="https://tripleten.com.br/blog/" hreflang="pt-br">
+<link rel="alternate" href="index.html" hreflang="en-us">
+<link rel="alternate" href="index.html" hreflang="en">
+<link rel="alternate" href="https://tripleten.cl/blog/" hreflang="es-cl">
+<link rel="alternate" href="https://tripleten.pe/blog/" hreflang="es-pe">
+<link rel="alternate" href="https://tripleten.ec/blog/" hreflang="es-ec">
+<link rel="alternate" href="https://tripleten.co.il/blog/" hreflang="en-il">
+<link rel="alternate" href="index.html" hreflang="x-default" />
+<link href="index.html" rel="canonical">
+<!-- [Attributes by Finsweet] CMS Load -->
+<script async src="../../cdn.jsdelivr.net/npm/%40finsweet/attributes-cmsload%401/cmsload.js"></script>
+<!-- [Attributes by Finsweet] CMS Filter -->
+<script async src="../../cdn.jsdelivr.net/npm/%40finsweet/attributes-cmsfilter%401/cmsfilter.js"></script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Tripleten",
+        "logo": "https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/648879040555c5d274c473dd_logo-tripleten.svg"
+    },
+    "url": "https://www.tripleten.com/blog/",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.tripleten.com/blog/"
+    },
+    "description": "Articles about work, skills, and careers in tech from team and students of the Tripleten."
+}
+</script>
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="../../js-eu1.hs-scripts.com/25196166.js"></script>
+<!-- End of HubSpot Embed Code --><script src="../../cdn.prod.website-files.com/6053a5b7250a503b3254324e/652d31f3dc22d7b4ee708e44/661efdf70c985ed63a23bdba/clarity_script-9.1.7.js" type="text/javascript"></script></head><body class="body-light"><div data-collapse="medium" data-animation="default" data-duration="400" data-doc-height="1" data-easing="ease" data-easing2="ease" role="banner" class="navigation w-nav"><div class="navigation-container"><div class="nav-wrap"><a href="../index.html" target="_blank" class="logo w-inline-block"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/648879040555c5d274c473dd_logo-tripleten.svg" width="105" height="24" alt="" class="image-logo"/></a></div><nav role="navigation" class="nav-menu white w-nav-menu"><a href="../index.html" target="_blank" class="logo-copy logo-tablet w-inline-block"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/648879040555c5d274c473dd_logo-tripleten.svg" alt="" class="image-logo"/></a><form action="https://tripleten.com/search" class="search-wrap-header search-wrap-menu w-form"><input class="search-input w-input" maxlength="256" name="query" placeholder="Search by article title or keyword" type="search" id="search" required=""/><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/64b00f65a497810e9956d7a9_search-cross.svg" loading="lazy" data-w-id="7ac41d72-5b2d-b29f-1ef9-e747b34a0c9b" alt="" class="cross-icon-search"/><input type="submit" class="search-submit-header w-button" value=""/></form><a href="index.html" aria-current="page" class="navigation-link w-inline-block w--current"><div class="navigation-link-text">Blog</div></a><a href="software-engineer.html" class="navigation-link w-inline-block"><div class="navigation-link-text">Software Engineering</div></a><a href="data-scientist.html" class="navigation-link w-inline-block"><div class="navigation-link-text">Data Science</div></a><a href="bi-analyst.html" class="navigation-link w-inline-block"><div class="navigation-link-text">BI Analytics</div></a><a href="career-advice-start.html" class="navigation-link tablet-hidden w-inline-block"><div class="navigation-link-text">Career Advice</div></a><a href="student-successes-start.html" class="navigation-link tablet-hidden w-inline-block"><div class="navigation-link-text">Student Stories</div></a><a href="resources.html" class="navigation-link tablet-hidden w-inline-block"><div class="navigation-link-text">Resources</div></a><a href="../special/free-career-consultation/index.html" id="click_start_learning" target="_blank" class="navigation-button-copy navigation-button-tablet w-inline-block"><div class="navigation-link-text menu-button-tablet">Start learning</div></a><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/64b00cb1db0d441763fac2a9_search-icon.svg" loading="lazy" data-w-id="7a9db078-341e-f475-648e-dacdf0876c57" alt="" class="search-open"/></nav><form action="https://tripleten.com/search" class="search-wrap-header search-wrap-tablet w-form"><input class="search-input w-input" maxlength="256" name="query" placeholder="Search by article title or keyword" type="search" id="search" required=""/><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/64b00f65a497810e9956d7a9_search-cross.svg" loading="lazy" alt="" class="cross-icon-search cross-tablet"/><input type="submit" class="search-submit-header w-button" value="Search"/></form><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/64b00cb1db0d441763fac2a9_search-icon.svg" loading="lazy" data-w-id="d537cb28-4749-9ffb-32dd-5f99cf2e42a1" alt="" class="search-open search-open-tablet"/><a href="../special/free-career-consultation/index.html" id="click_start_learning" target="_blank" class="navigation-button w-inline-block"><div class="navigation-link-text menu-button">Start learning</div></a><div class="burger-button burger-button-scroll w-nav-button"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/645401c3060aec640b8551ec_burger-icon.svg" loading="lazy" alt="" class="image-30"/></div></div><div class="w-embed"><style>
+.fltr-active > .sort-button
+{
+    background-color: black;
+  color: white;
+}
+.nav-menu {
+ width: max-content;
+}
+.tablet-show {
+  display: none;
+}
+
+.search-input {
+  box-shadow: 0px 1px 4px 1px rgba(36, 36, 36, 0.07);
+}
+
+@media screen and (min-width: 992px) {
+  .navigation-link.w--current {
+    padding: 3px 6px;
+  }
+  .navigation-link.w--current::before,
+  .navigation-link.w--current::after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 12px;
+    top: 6px;
+  }
+  .navigation-link.w--current::before {
+    left: 0;
+    background-image: url('https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/6453887ea47d404034384ac4_curr-link-left.svg');
+  }
+  .navigation-link.w--current::after {
+    right: 0;
+    background-image: url('https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/6453887d49f48eec537a5ede_curr-link-right.svg');
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .w-nav-overlay {
+    top: 0%;
+  }
+  .navigation-button.navigation-button-hidden {
+    pointer-events: none;
+  }
+  .logo.logo-hidden {
+    pointer-events: none;
+  }
+}
+@media screen and (max-width: 1100px) and (min-width: 990px) {
+  .tablet-hidden {
+    display: none;
+  }
+  .tablet-show {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .search-input {
+    box-shadow: unset;
+  }
+}
+ </style></div></div><div class="banner_wrapper"><div id="quiz" class="banner_container _1"><section class="banner-ready quiz-2"><div class="banner-ready__container quiz-3"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/67f91ccf6bd5bde5eec90b12_image 70.webp" loading="lazy" alt="" class="banner_img quiz-4"/><img src="../../cdn.prod.website-files.com/6053a5b7250a503b3254324e/6862a38e977ef5da999c5bc2_image%2070.png" loading="lazy" alt="" class="banner_img quiz-4 mob"/><div class="banner-ready__title quiz-5">Not sure which tech job fits you? Take the free quiz</div><a id="click_start_learning" href="../quiz/career-quiz-nc/index.html" data-label="offer_to_quiz" target="_blank" class="navigation-button hide quiz-11 w-inline-block"><div class="navigation-link-text menu-button banner_btn quiz-12">Let’s Go</div></a><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/67f9358ab7598165085dde99_Group 2087327006.webp" loading="lazy" alt="" class="banner_img quiz-4 _2 quiz-13"/></div></section></div><div id="offer" class="banner_container _2"></div><div class="hide w-embed w-script"><script type="text/javascript" src="../usa-main/usa-landing-headerf0d3.js?ts=2" async onload="headerLoaded()"></script>
+
+<script>
+let headerReady = false
+const headerCallbackQueue = []
+
+function headerLoaded(){
+    headerReady = true
+    for (let callback of headerCallbackQueue) {
+        callback()
+    }
+}
+
+function onHeaderLoaded (callback) {
+    if (headerReady) {
+        callback()
+    } else {
+        headerCallbackQueue.push(callback)
+    }
+}
+</script>
+
+<script>
+onHeaderLoaded(() => {
+    mountOffer("#offer", { fixed: true });
+
+    function trackBannerClicks(containerSelector, eventLabel) {
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
+
+        container.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+            		console.log('banner_click', eventLabel )
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    event: 'banner_click',
+                    event_label: eventLabel
+                });
+            });
+        });
+    }
+
+    trackBannerClicks('#quiz', 'offer_to_quiz');
+    trackBannerClicks('#offer', 'banner_with_discount');
+
+  	const offerBanner = document.querySelector('#offer');
+      if (offerBanner) {
+          offerBanner.querySelectorAll('a').forEach(link => {
+              link.setAttribute('href', '../index.html');
+              link.setAttribute('target', '_blank');
+          });
+      }
+});
+</script></div></div><div class="top-post"><div class="container-post"><div class="posts-wrapper cc-top-post"><h1 class="main-title">TripleTen Blog</h1><div class="main-description">All the news that&#x27;s fit to <span class="main-desctiprion-mono">print</span> ()</div></div></div></div><div fs-cmsload-element="scroll-anchor" class="section-news"><div class="container-post"><div class="h2-section hide">Recent articles</div><div fs-cmsfilter-element="filters" class="filters-form filters-main w-form"><form id="email-form" name="email-form" data-name="Email Form" method="get" class="filters-form-wrap" data-wf-page-id="65e1a6b7f57db81aec83f398" data-wf-element-id="b44808c3-c1c4-4b24-bee3-b3e0b4c0620a" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"><div class="filtersembed w-embed w-script"><script>
+document.addEventListener('DOMContentLoaded', function() {
+  const radioElements = document.querySelectorAll('.w-radio');
+  const clearElement = document.querySelector('[fs-cmsfilter-element="clear"]');
+
+  radioElements.forEach(element => {
+    element.addEventListener('click', () => {
+      if(!element.classList.contains('fltr-active')){
+        clearElement.classList.remove('fltr-active');
+      }
+    });
+  });
+  clearElement.addEventListener('click', () => {
+			clearElement.classList.add('fltr-active');
+    });
+ })
+</script></div><div class="filters-group filters-category2 w-dyn-list"><div role="list" class="collection-list-5 w-dyn-items"><div role="listitem" class="w-dyn-item"><label class="sort-button w-radio"><input type="radio" data-name="Radio 2" id="radio-2" name="radio-2" class="w-form-formradioinput radio-button-3 w-radio-input" value="Radio 2"/><span fs-cmsfilter-active="fltr-active" fs-cmsfilter-field="tag" class="tag-text w-form-label" for="radio-2">Externships</span></label></div><div role="listitem" class="w-dyn-item"><label class="sort-button w-radio"><input type="radio" data-name="Radio 2" id="radio-2" name="radio-2" class="w-form-formradioinput radio-button-3 w-radio-input" value="Radio 2"/><span fs-cmsfilter-active="fltr-active" fs-cmsfilter-field="tag" class="tag-text w-form-label" for="radio-2">Programming languages</span></label></div><div role="listitem" class="w-dyn-item"><label class="sort-button w-radio"><input type="radio" data-name="Radio 2" id="radio-2" name="radio-2" class="w-form-formradioinput radio-button-3 w-radio-input" value="Radio 2"/><span fs-cmsfilter-active="fltr-active" fs-cmsfilter-field="tag" class="tag-text w-form-label" for="radio-2">Learning resources</span></label></div><div role="listitem" class="w-dyn-item"><label class="sort-button w-radio"><input type="radio" data-name="Radio 2" id="radio-2" name="radio-2" class="w-form-formradioinput radio-button-3 w-radio-input" value="Radio 2"/><span fs-cmsfilter-active="fltr-active" fs-cmsfilter-field="tag" class="tag-text w-form-label" for="radio-2">How TripleTen works</span></label></div><div role="listitem" class="w-dyn-item"><label class="sort-button w-radio"><input type="radio" data-name="Radio 2" id="radio-2" name="radio-2" class="w-form-formradioinput radio-button-3 w-radio-input" value="Radio 2"/><span fs-cmsfilter-active="fltr-active" fs-cmsfilter-field="tag" class="tag-text w-form-label" for="radio-2">Student stories</span></label></div><div role="listitem" class="w-dyn-item"><label class="sort-button w-radio"><input type="radio" data-name="Radio 2" id="radio-2" name="radio-2" class="w-form-formradioinput radio-button-3 w-radio-input" value="Radio 2"/><span fs-cmsfilter-active="fltr-active" fs-cmsfilter-field="tag" class="tag-text w-form-label" for="radio-2">Job profiles</span></label></div><div role="listitem" class="w-dyn-item"><label class="sort-button w-radio"><input type="radio" data-name="Radio 2" id="radio-2" name="radio-2" class="w-form-formradioinput radio-button-3 w-radio-input" value="Radio 2"/><span fs-cmsfilter-active="fltr-active" fs-cmsfilter-field="tag" class="tag-text w-form-label" for="radio-2">Soft skills</span></label></div><div role="listitem" class="w-dyn-item"><label class="sort-button w-radio"><input type="radio" data-name="Radio 2" id="radio-2" name="radio-2" class="w-form-formradioinput radio-button-3 w-radio-input" value="Radio 2"/><span fs-cmsfilter-active="fltr-active" fs-cmsfilter-field="tag" class="tag-text w-form-label" for="radio-2">Job search</span></label></div></div></div></form><div class="w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div><div class="posts-wrapper"><div class="w-embed"><style>
+/*
+.newcollection-item:nth-child(8n) {
+  -ms-grid-column: span 2;
+  grid-column-start: span 2;
+  -ms-grid-column-span: 2;
+  grid-column-end: span 2;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+  
+  display: grid;
+  padding-right: 0px;
+  padding-left: 0px;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
+.newcollection-item:nth-child(8n) .form-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .newcollection-item:nth-child(8n) {
+    -ms-grid-column: span 2;
+    grid-column-start: span 2;
+    -ms-grid-column-span: 2;
+    grid-column-end: span 2;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+
+    display: block !important;
+    padding-right: 0px;
+    padding-left: 0px;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+  }
+}*/
+</style></div><div class="html-embed w-embed w-script"><script>
+//Код для добавления класса с другими стилями к тегам в зеленых карточках, чтобы фичерная статья осталась с прежним визуалом
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenPosts = document.querySelectorAll(".green_post");
+  greenPosts.forEach(function(post) {
+      const categoryLinks = post.querySelectorAll(".category-link");
+      categoryLinks.forEach(function(link) {
+      link.classList.add("green_card");
+    });
+  });
+});
+</script></div><div class="posts-collection-list-wrapper w-dyn-list"><div fs-cmsload-showquery="true" fs-cmsfilter-element="list" fs-cmsload-element="list" fs-cmsload-cache="false" fs-cmsload-resetix="true" fs-cmsload-mode="pagination" role="list" class="posts-collection-list blog-posts-list w-dyn-items"><div data-w-id="6d99e597-199a-189e-d3c8-dca8a1b1dc45" role="listitem" class="newcollection-item w-dyn-item"><div style="background-image:none" class="post-block"><a href="posts/personal-life-vs-a-professional-pivot-why-you-dont-have-to-choose.html" class="posts-image w-inline-block"><img alt="" src="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67bf5d09a6311b8c893350a4_Personal Life vs. a Professional Pivot_ Why You Dont Have to Choose.webp" sizes="100vw" srcset="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67bf5d09a6311b8c893350a4_Personal%20Life%20vs.%20a%20Professional%20Pivot_%20Why%20You%20Dont%20Have%20to%20Choose-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67bf5d09a6311b8c893350a4_Personal%20Life%20vs.%20a%20Professional%20Pivot_%20Why%20You%20Dont%20Have%20to%20Choose-p-800.webp 800w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67bf5d09a6311b8c893350a4_Personal%20Life%20vs.%20a%20Professional%20Pivot_%20Why%20You%20Dont%20Have%20to%20Choose-p-1080.webp 1080w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67bf5d09a6311b8c893350a4_Personal%20Life%20vs.%20a%20Professional%20Pivot_%20Why%20You%20Dont%20Have%20to%20Choose-p-1600.webp 1600w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67bf5d09a6311b8c893350a4_Personal%20Life%20vs.%20a%20Professional%20Pivot_%20Why%20You%20Dont%20Have%20to%20Choose.webp 1900w" class="image-2"/></a><div class="post-info-text"><div class="tags"><div class="tag-profession w-condition-invisible"><div class="profession w-dyn-bind-empty"></div></div><div class="w-dyn-list"><div role="list" class="collection-list-7 w-dyn-items"><div role="listitem" class="w-dyn-item"><div fs-cmsfilter-field="tag" class="category-link">How TripleTen works</div></div></div></div></div><a href="posts/personal-life-vs-a-professional-pivot-why-you-dont-have-to-choose.html" class="post-title-link top-padding w-inline-block"><h3 class="h3">Personal Life vs. a Professional Pivot: Why You Don’t Have to Choose</h3></a></div></div><a href="posts/personal-life-vs-a-professional-pivot-why-you-dont-have-to-choose.html" class="green_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">Personal Life vs. a Professional Pivot: Why You Don’t Have to Choose</h3><div class="text-of-categories-list">How TripleTen works</div></a><a style="background-image:none" href="posts/personal-life-vs-a-professional-pivot-why-you-dont-have-to-choose.html" class="bg_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">Personal Life vs. a Professional Pivot: Why You Don’t Have to Choose</h3><div class="text-of-categories-list">How TripleTen works</div><div class="html-embed w-embed w-script"><script>
+//Код для добавления класса с другими стилями к тегам в зеленых карточках, чтобы фичерная статья осталась с прежним визуалом
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenPosts = document.querySelectorAll(".bg_post");
+  greenPosts.forEach(function(post) {
+      const categoryLinks = post.querySelectorAll(".category-link");
+      categoryLinks.forEach(function(link) {
+      link.classList.add("green_card");
+    });
+  });
+});
+</script></div></a></div><div data-w-id="6d99e597-199a-189e-d3c8-dca8a1b1dc45" role="listitem" class="newcollection-item w-dyn-item"><div style="background-image:none" class="post-block"><a href="posts/is-tripleten-good-for-beginners.html" class="posts-image w-inline-block"><img alt="" src="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67c04dbcfff44929fcd2454e_Is TripleTen Good For Beginners_.webp" sizes="100vw" srcset="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67c04dbcfff44929fcd2454e_Is%20TripleTen%20Good%20For%20Beginners_-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67c04dbcfff44929fcd2454e_Is%20TripleTen%20Good%20For%20Beginners_-p-800.webp 800w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67c04dbcfff44929fcd2454e_Is%20TripleTen%20Good%20For%20Beginners_-p-1080.webp 1080w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67c04dbcfff44929fcd2454e_Is%20TripleTen%20Good%20For%20Beginners_-p-1600.webp 1600w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67c04dbcfff44929fcd2454e_Is%20TripleTen%20Good%20For%20Beginners_.webp 1900w" class="image-2"/></a><div class="post-info-text"><div class="tags"><div class="tag-profession w-condition-invisible"><div class="profession w-dyn-bind-empty"></div></div><div class="w-dyn-list"><div role="list" class="collection-list-7 w-dyn-items"><div role="listitem" class="w-dyn-item"><div fs-cmsfilter-field="tag" class="category-link">How TripleTen works</div></div></div></div></div><a href="posts/is-tripleten-good-for-beginners.html" class="post-title-link top-padding w-inline-block"><h3 class="h3">Is TripleTen Good For Beginners?</h3></a></div></div><a href="posts/is-tripleten-good-for-beginners.html" class="green_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">Is TripleTen Good For Beginners?</h3><div class="text-of-categories-list">How TripleTen works</div></a><a style="background-image:none" href="posts/is-tripleten-good-for-beginners.html" class="bg_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">Is TripleTen Good For Beginners?</h3><div class="text-of-categories-list">How TripleTen works</div><div class="html-embed w-embed w-script"><script>
+//Код для добавления класса с другими стилями к тегам в зеленых карточках, чтобы фичерная статья осталась с прежним визуалом
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenPosts = document.querySelectorAll(".bg_post");
+  greenPosts.forEach(function(post) {
+      const categoryLinks = post.querySelectorAll(".category-link");
+      categoryLinks.forEach(function(link) {
+      link.classList.add("green_card");
+    });
+  });
+});
+</script></div></a></div><div data-w-id="6d99e597-199a-189e-d3c8-dca8a1b1dc45" role="listitem" class="newcollection-item w-dyn-item"><div style="background-image:none" class="post-block"><a href="posts/why-do-people-drop-out-of-bootcamps.html" class="posts-image w-inline-block"><img alt="" src="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67be1507364b0595e4ded4bf_Why Do People Drop Out of Bootcamps_.webp" sizes="100vw" srcset="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67be1507364b0595e4ded4bf_Why%20Do%20People%20Drop%20Out%20of%20Bootcamps_-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67be1507364b0595e4ded4bf_Why%20Do%20People%20Drop%20Out%20of%20Bootcamps_-p-800.webp 800w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67be1507364b0595e4ded4bf_Why%20Do%20People%20Drop%20Out%20of%20Bootcamps_-p-1080.webp 1080w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67be1507364b0595e4ded4bf_Why%20Do%20People%20Drop%20Out%20of%20Bootcamps_.webp 1835w" class="image-2"/></a><div class="post-info-text"><div class="tags"><div class="tag-profession w-condition-invisible"><div class="profession w-dyn-bind-empty"></div></div><div class="w-dyn-list"><div role="list" class="collection-list-7 w-dyn-items"><div role="listitem" class="w-dyn-item"><div fs-cmsfilter-field="tag" class="category-link">How TripleTen works</div></div></div></div></div><a href="posts/why-do-people-drop-out-of-bootcamps.html" class="post-title-link top-padding w-inline-block"><h3 class="h3">Why Do People Drop Out of Bootcamps?</h3></a></div></div><a href="posts/why-do-people-drop-out-of-bootcamps.html" class="green_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">Why Do People Drop Out of Bootcamps?</h3><div class="text-of-categories-list">How TripleTen works</div></a><a style="background-image:none" href="posts/why-do-people-drop-out-of-bootcamps.html" class="bg_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">Why Do People Drop Out of Bootcamps?</h3><div class="text-of-categories-list">How TripleTen works</div><div class="html-embed w-embed w-script"><script>
+//Код для добавления класса с другими стилями к тегам в зеленых карточках, чтобы фичерная статья осталась с прежним визуалом
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenPosts = document.querySelectorAll(".bg_post");
+  greenPosts.forEach(function(post) {
+      const categoryLinks = post.querySelectorAll(".category-link");
+      categoryLinks.forEach(function(link) {
+      link.classList.add("green_card");
+    });
+  });
+});
+</script></div></a></div><div data-w-id="6d99e597-199a-189e-d3c8-dca8a1b1dc45" role="listitem" class="newcollection-item w-dyn-item"><div style="background-image:none" class="post-block"><a href="posts/yeah-its-time-to-quit---part-two-toxicity.html" class="posts-image w-inline-block"><img alt="" src="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67b740007827c343eb601335_Yeah%2C It%27s Time to Quit - Part Two_ Toxicity.webp" sizes="100vw" srcset="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67b740007827c343eb601335_Yeah%2C%20It%27s%20Time%20to%20Quit%20-%20Part%20Two_%20Toxicity-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67b740007827c343eb601335_Yeah%2C%20It%27s%20Time%20to%20Quit%20-%20Part%20Two_%20Toxicity-p-800.webp 800w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67b740007827c343eb601335_Yeah%2C%20It%27s%20Time%20to%20Quit%20-%20Part%20Two_%20Toxicity-p-1080.webp 1080w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67b740007827c343eb601335_Yeah%2C%20It%27s%20Time%20to%20Quit%20-%20Part%20Two_%20Toxicity-p-1600.webp 1600w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67b740007827c343eb601335_Yeah%2C%20It%27s%20Time%20to%20Quit%20-%20Part%20Two_%20Toxicity.webp 1900w" class="image-2"/></a><div class="post-info-text"><div class="tags"><div class="tag-profession w-condition-invisible"><div class="profession w-dyn-bind-empty"></div></div><div class="w-dyn-list"><div role="list" class="collection-list-7 w-dyn-items"><div role="listitem" class="w-dyn-item"><div fs-cmsfilter-field="tag" class="category-link">Job search</div></div></div></div></div><a href="posts/yeah-its-time-to-quit---part-two-toxicity.html" class="post-title-link top-padding w-inline-block"><h3 class="h3">Yeah, It&#x27;s Time to Quit - Part Two: Toxicity</h3></a></div></div><a href="posts/yeah-its-time-to-quit---part-two-toxicity.html" class="green_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">Yeah, It&#x27;s Time to Quit - Part Two: Toxicity</h3><div class="text-of-categories-list">Job search</div></a><a style="background-image:none" href="posts/yeah-its-time-to-quit---part-two-toxicity.html" class="bg_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">Yeah, It&#x27;s Time to Quit - Part Two: Toxicity</h3><div class="text-of-categories-list">Job search</div><div class="html-embed w-embed w-script"><script>
+//Код для добавления класса с другими стилями к тегам в зеленых карточках, чтобы фичерная статья осталась с прежним визуалом
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenPosts = document.querySelectorAll(".bg_post");
+  greenPosts.forEach(function(post) {
+      const categoryLinks = post.querySelectorAll(".category-link");
+      categoryLinks.forEach(function(link) {
+      link.classList.add("green_card");
+    });
+  });
+});
+</script></div></a></div><div data-w-id="6d99e597-199a-189e-d3c8-dca8a1b1dc45" role="listitem" class="newcollection-item w-dyn-item"><div style="background-image:none" class="post-block"><a href="posts/if-you-have-enough-time-for-this-you-have-enough-time-for-a-bootcamp.html" class="posts-image w-inline-block"><img alt="" src="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67b4f47b79e215d4dc47b8cb_If You Have Enough Time for This%2C You Have Enough Time for a Bootcamp.webp" sizes="100vw" srcset="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67b4f47b79e215d4dc47b8cb_If%20You%20Have%20Enough%20Time%20for%20This%2C%20You%20Have%20Enough%20Time%20for%20a%20Bootcamp-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67b4f47b79e215d4dc47b8cb_If%20You%20Have%20Enough%20Time%20for%20This%2C%20You%20Have%20Enough%20Time%20for%20a%20Bootcamp-p-800.webp 800w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67b4f47b79e215d4dc47b8cb_If%20You%20Have%20Enough%20Time%20for%20This%2C%20You%20Have%20Enough%20Time%20for%20a%20Bootcamp-p-1080.webp 1080w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67b4f47b79e215d4dc47b8cb_If%20You%20Have%20Enough%20Time%20for%20This%2C%20You%20Have%20Enough%20Time%20for%20a%20Bootcamp-p-1600.webp 1600w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67b4f47b79e215d4dc47b8cb_If%20You%20Have%20Enough%20Time%20for%20This%2C%20You%20Have%20Enough%20Time%20for%20a%20Bootcamp.webp 1900w" class="image-2"/></a><div class="post-info-text"><div class="tags"><div class="tag-profession w-condition-invisible"><div class="profession w-dyn-bind-empty"></div></div><div class="w-dyn-list"><div role="list" class="collection-list-7 w-dyn-items"><div role="listitem" class="w-dyn-item"><div fs-cmsfilter-field="tag" class="category-link">How TripleTen works</div></div></div></div></div><a href="posts/if-you-have-enough-time-for-this-you-have-enough-time-for-a-bootcamp.html" class="post-title-link top-padding w-inline-block"><h3 class="h3">If You Have Enough Time For This, You Have Enough Time for a Bootcamp</h3></a></div></div><a href="posts/if-you-have-enough-time-for-this-you-have-enough-time-for-a-bootcamp.html" class="green_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">If You Have Enough Time For This, You Have Enough Time for a Bootcamp</h3><div class="text-of-categories-list">How TripleTen works</div></a><a style="background-image:none" href="posts/if-you-have-enough-time-for-this-you-have-enough-time-for-a-bootcamp.html" class="bg_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">If You Have Enough Time For This, You Have Enough Time for a Bootcamp</h3><div class="text-of-categories-list">How TripleTen works</div><div class="html-embed w-embed w-script"><script>
+//Код для добавления класса с другими стилями к тегам в зеленых карточках, чтобы фичерная статья осталась с прежним визуалом
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenPosts = document.querySelectorAll(".bg_post");
+  greenPosts.forEach(function(post) {
+      const categoryLinks = post.querySelectorAll(".category-link");
+      categoryLinks.forEach(function(link) {
+      link.classList.add("green_card");
+    });
+  });
+});
+</script></div></a></div><div data-w-id="6d99e597-199a-189e-d3c8-dca8a1b1dc45" role="listitem" class="newcollection-item w-dyn-item"><div style="background-image:none" class="post-block"><a href="posts/from-law-enforcement-to-qa-gerardo-antolino-torres-iis-student-story.html" class="posts-image w-inline-block"><img alt="" src="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67addcf5114252e87ac73a14_QA (4).webp" sizes="100vw" srcset="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67addcf5114252e87ac73a14_QA%20(4)-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67addcf5114252e87ac73a14_QA%20(4)-p-800.webp 800w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67addcf5114252e87ac73a14_QA%20(4)-p-1080.webp 1080w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67addcf5114252e87ac73a14_QA%20(4)-p-1600.webp 1600w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67addcf5114252e87ac73a14_QA%20(4)-p-2000.webp 2000w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67addcf5114252e87ac73a14_QA%20(4)-p-2600.webp 2600w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67addcf5114252e87ac73a14_QA%20(4).webp 2880w" class="image-2"/></a><div class="post-info-text"><div class="tags"><div style="background-color:#b69df1" class="tag-profession"><div class="profession">Quality Assurance</div></div><div class="w-dyn-list"><div role="list" class="collection-list-7 w-dyn-items"><div role="listitem" class="w-dyn-item"><div fs-cmsfilter-field="tag" class="category-link">Student stories</div></div></div></div></div><a href="posts/from-law-enforcement-to-qa-gerardo-antolino-torres-iis-student-story.html" class="post-title-link top-padding w-inline-block"><h3 class="h3">From Law Enforcement to QA: Gerardo Antolino Torres II’s TripleTen Story</h3></a></div></div><a href="posts/from-law-enforcement-to-qa-gerardo-antolino-torres-iis-student-story.html" class="green_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">From Law Enforcement to QA: Gerardo Antolino Torres II’s TripleTen Story</h3><div class="text-of-categories-list w-dyn-bind-empty"></div></a><a style="background-image:none" href="posts/from-law-enforcement-to-qa-gerardo-antolino-torres-iis-student-story.html" class="bg_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">From Law Enforcement to QA: Gerardo Antolino Torres II’s TripleTen Story</h3><div class="text-of-categories-list w-dyn-bind-empty"></div><div class="html-embed w-embed w-script"><script>
+//Код для добавления класса с другими стилями к тегам в зеленых карточках, чтобы фичерная статья осталась с прежним визуалом
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenPosts = document.querySelectorAll(".bg_post");
+  greenPosts.forEach(function(post) {
+      const categoryLinks = post.querySelectorAll(".category-link");
+      categoryLinks.forEach(function(link) {
+      link.classList.add("green_card");
+    });
+  });
+});
+</script></div></a></div><div data-w-id="6d99e597-199a-189e-d3c8-dca8a1b1dc45" role="listitem" class="newcollection-item w-dyn-item"><div style="background-image:none" class="post-block"><a href="posts/despite-the-ai-hype-companies-will-still-need-coders.html" class="posts-image w-inline-block"><img alt="" src="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67add81bce2c9d6527f879a4_Despite the AI Hype_ Companies Will Still Need Coders.webp" sizes="100vw" srcset="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67add81bce2c9d6527f879a4_Despite%20the%20AI%20Hype_%20Companies%20Will%20Still%20Need%20Coders-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67add81bce2c9d6527f879a4_Despite%20the%20AI%20Hype_%20Companies%20Will%20Still%20Need%20Coders-p-800.webp 800w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67add81bce2c9d6527f879a4_Despite%20the%20AI%20Hype_%20Companies%20Will%20Still%20Need%20Coders-p-1080.webp 1080w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67add81bce2c9d6527f879a4_Despite%20the%20AI%20Hype_%20Companies%20Will%20Still%20Need%20Coders.webp 1835w" class="image-2"/></a><div class="post-info-text"><div class="tags"><div class="tag-profession w-condition-invisible"><div class="profession w-dyn-bind-empty"></div></div><div class="w-dyn-list"><div role="list" class="collection-list-7 w-dyn-items"><div role="listitem" class="w-dyn-item"><div fs-cmsfilter-field="tag" class="category-link">Job search</div></div></div></div></div><a href="posts/despite-the-ai-hype-companies-will-still-need-coders.html" class="post-title-link top-padding w-inline-block"><h3 class="h3">Despite the AI Hype, Companies Will Still Need Coders</h3></a></div></div><a href="posts/despite-the-ai-hype-companies-will-still-need-coders.html" class="green_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">Despite the AI Hype, Companies Will Still Need Coders</h3><div class="text-of-categories-list">Job search</div></a><a style="background-image:none" href="posts/despite-the-ai-hype-companies-will-still-need-coders.html" class="bg_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">Despite the AI Hype, Companies Will Still Need Coders</h3><div class="text-of-categories-list">Job search</div><div class="html-embed w-embed w-script"><script>
+//Код для добавления класса с другими стилями к тегам в зеленых карточках, чтобы фичерная статья осталась с прежним визуалом
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenPosts = document.querySelectorAll(".bg_post");
+  greenPosts.forEach(function(post) {
+      const categoryLinks = post.querySelectorAll(".category-link");
+      categoryLinks.forEach(function(link) {
+      link.classList.add("green_card");
+    });
+  });
+});
+</script></div></a></div><div data-w-id="6d99e597-199a-189e-d3c8-dca8a1b1dc45" role="listitem" class="newcollection-item w-dyn-item"><div style="background-image:none" class="post-block"><a href="posts/the-clever-way-to-spend-your-gap-year.html" class="posts-image w-inline-block"><img alt="" src="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67ab78b5edcbe65cbc59b25f_The Clever Way to Spend Your Gap Year.webp" sizes="100vw" srcset="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67ab78b5edcbe65cbc59b25f_The%20Clever%20Way%20to%20Spend%20Your%20Gap%20Year-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67ab78b5edcbe65cbc59b25f_The%20Clever%20Way%20to%20Spend%20Your%20Gap%20Year-p-800.webp 800w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67ab78b5edcbe65cbc59b25f_The%20Clever%20Way%20to%20Spend%20Your%20Gap%20Year-p-1080.webp 1080w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67ab78b5edcbe65cbc59b25f_The%20Clever%20Way%20to%20Spend%20Your%20Gap%20Year-p-1600.webp 1600w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67ab78b5edcbe65cbc59b25f_The%20Clever%20Way%20to%20Spend%20Your%20Gap%20Year.webp 1900w" class="image-2"/></a><div class="post-info-text"><div class="tags"><div class="tag-profession w-condition-invisible"><div class="profession w-dyn-bind-empty"></div></div><div class="w-dyn-list"><div role="list" class="collection-list-7 w-dyn-items"><div role="listitem" class="w-dyn-item"><div fs-cmsfilter-field="tag" class="category-link">Learning resources</div></div></div></div></div><a href="posts/the-clever-way-to-spend-your-gap-year.html" class="post-title-link top-padding w-inline-block"><h3 class="h3">The Clever Way to Spend Your Gap Year</h3></a></div></div><a href="posts/the-clever-way-to-spend-your-gap-year.html" class="green_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">The Clever Way to Spend Your Gap Year</h3><div class="text-of-categories-list">Learning resources</div></a><a style="background-image:none" href="posts/the-clever-way-to-spend-your-gap-year.html" class="bg_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">The Clever Way to Spend Your Gap Year</h3><div class="text-of-categories-list">Learning resources</div><div class="html-embed w-embed w-script"><script>
+//Код для добавления класса с другими стилями к тегам в зеленых карточках, чтобы фичерная статья осталась с прежним визуалом
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenPosts = document.querySelectorAll(".bg_post");
+  greenPosts.forEach(function(post) {
+      const categoryLinks = post.querySelectorAll(".category-link");
+      categoryLinks.forEach(function(link) {
+      link.classList.add("green_card");
+    });
+  });
+});
+</script></div></a></div><div data-w-id="6d99e597-199a-189e-d3c8-dca8a1b1dc45" role="listitem" class="newcollection-item w-dyn-item"><div style="background-image:none" class="post-block"><a href="posts/what-if-im-not-smart-enough-for-a-bootcamp.html" class="posts-image w-inline-block"><img alt="" src="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67a4ccb2bb571f68f2b41c88_“What If Im Not Smart Enough for a Bootcamp_”.webp" sizes="100vw" srcset="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67a4ccb2bb571f68f2b41c88_%E2%80%9CWhat%20If%20Im%20Not%20Smart%20Enough%20for%20a%20Bootcamp_%E2%80%9D-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67a4ccb2bb571f68f2b41c88_%E2%80%9CWhat%20If%20Im%20Not%20Smart%20Enough%20for%20a%20Bootcamp_%E2%80%9D-p-800.webp 800w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67a4ccb2bb571f68f2b41c88_%E2%80%9CWhat%20If%20Im%20Not%20Smart%20Enough%20for%20a%20Bootcamp_%E2%80%9D-p-1080.webp 1080w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67a4ccb2bb571f68f2b41c88_%E2%80%9CWhat%20If%20Im%20Not%20Smart%20Enough%20for%20a%20Bootcamp_%E2%80%9D-p-1600.webp 1600w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67a4ccb2bb571f68f2b41c88_%E2%80%9CWhat%20If%20Im%20Not%20Smart%20Enough%20for%20a%20Bootcamp_%E2%80%9D.webp 1900w" class="image-2"/></a><div class="post-info-text"><div class="tags"><div class="tag-profession w-condition-invisible"><div class="profession w-dyn-bind-empty"></div></div><div class="w-dyn-list"><div role="list" class="collection-list-7 w-dyn-items"><div role="listitem" class="w-dyn-item"><div fs-cmsfilter-field="tag" class="category-link">How TripleTen works</div></div></div></div></div><a href="posts/what-if-im-not-smart-enough-for-a-bootcamp.html" class="post-title-link top-padding w-inline-block"><h3 class="h3">“What If I’m Not Smart Enough for a Bootcamp?”</h3></a></div></div><a href="posts/what-if-im-not-smart-enough-for-a-bootcamp.html" class="green_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">“What If I’m Not Smart Enough for a Bootcamp?”</h3><div class="text-of-categories-list">How TripleTen works</div></a><a style="background-image:none" href="posts/what-if-im-not-smart-enough-for-a-bootcamp.html" class="bg_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">“What If I’m Not Smart Enough for a Bootcamp?”</h3><div class="text-of-categories-list">How TripleTen works</div><div class="html-embed w-embed w-script"><script>
+//Код для добавления класса с другими стилями к тегам в зеленых карточках, чтобы фичерная статья осталась с прежним визуалом
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenPosts = document.querySelectorAll(".bg_post");
+  greenPosts.forEach(function(post) {
+      const categoryLinks = post.querySelectorAll(".category-link");
+      categoryLinks.forEach(function(link) {
+      link.classList.add("green_card");
+    });
+  });
+});
+</script></div></a></div><div data-w-id="6d99e597-199a-189e-d3c8-dca8a1b1dc45" role="listitem" class="newcollection-item w-dyn-item"><div style="background-image:none" class="post-block"><a href="posts/choosing-tech-over-the-trades-why-its-the-right-idea.html" class="posts-image w-inline-block"><img alt="" src="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67a22262618ad27409d2be7b_Choosing Tech Over the Trades_ Why Its the Right Idea.webp" sizes="100vw" srcset="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67a22262618ad27409d2be7b_Choosing%20Tech%20Over%20the%20Trades_%20Why%20Its%20the%20Right%20Idea-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67a22262618ad27409d2be7b_Choosing%20Tech%20Over%20the%20Trades_%20Why%20Its%20the%20Right%20Idea-p-800.webp 800w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67a22262618ad27409d2be7b_Choosing%20Tech%20Over%20the%20Trades_%20Why%20Its%20the%20Right%20Idea-p-1080.webp 1080w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67a22262618ad27409d2be7b_Choosing%20Tech%20Over%20the%20Trades_%20Why%20Its%20the%20Right%20Idea-p-1600.webp 1600w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/67a22262618ad27409d2be7b_Choosing%20Tech%20Over%20the%20Trades_%20Why%20Its%20the%20Right%20Idea.webp 1900w" class="image-2"/></a><div class="post-info-text"><div class="tags"><div class="tag-profession w-condition-invisible"><div class="profession w-dyn-bind-empty"></div></div><div class="w-dyn-list"><div role="list" class="collection-list-7 w-dyn-items"><div role="listitem" class="w-dyn-item"><div fs-cmsfilter-field="tag" class="category-link">Job search</div></div></div></div></div><a href="posts/choosing-tech-over-the-trades-why-its-the-right-idea.html" class="post-title-link top-padding w-inline-block"><h3 class="h3">Choosing Tech Over the Trades: Why It’s the Right Idea</h3></a></div></div><a href="posts/choosing-tech-over-the-trades-why-its-the-right-idea.html" class="green_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">Choosing Tech Over the Trades: Why It’s the Right Idea</h3><div class="text-of-categories-list">Job search</div></a><a style="background-image:none" href="posts/choosing-tech-over-the-trades-why-its-the-right-idea.html" class="bg_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">Choosing Tech Over the Trades: Why It’s the Right Idea</h3><div class="text-of-categories-list">Job search</div><div class="html-embed w-embed w-script"><script>
+//Код для добавления класса с другими стилями к тегам в зеленых карточках, чтобы фичерная статья осталась с прежним визуалом
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenPosts = document.querySelectorAll(".bg_post");
+  greenPosts.forEach(function(post) {
+      const categoryLinks = post.querySelectorAll(".category-link");
+      categoryLinks.forEach(function(link) {
+      link.classList.add("green_card");
+    });
+  });
+});
+</script></div></a></div><div data-w-id="6d99e597-199a-189e-d3c8-dca8a1b1dc45" role="listitem" class="newcollection-item w-dyn-item"><div style="background-image:none" class="post-block"><a href="posts/the-skills-thatll-help-you-thrive----regardless-of-industry.html" class="posts-image w-inline-block"><img alt="" src="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/679b4d9f8fee9f028e970737_The Skills Thatll Help You Thrive — Regardless of Industry.webp" sizes="100vw" srcset="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/679b4d9f8fee9f028e970737_The%20Skills%20Thatll%20Help%20You%20Thrive%20%E2%80%94%20Regardless%20of%20Industry-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/679b4d9f8fee9f028e970737_The%20Skills%20Thatll%20Help%20You%20Thrive%20%E2%80%94%20Regardless%20of%20Industry-p-800.webp 800w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/679b4d9f8fee9f028e970737_The%20Skills%20Thatll%20Help%20You%20Thrive%20%E2%80%94%20Regardless%20of%20Industry-p-1080.webp 1080w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/679b4d9f8fee9f028e970737_The%20Skills%20Thatll%20Help%20You%20Thrive%20%E2%80%94%20Regardless%20of%20Industry.webp 1835w" class="image-2"/></a><div class="post-info-text"><div class="tags"><div class="tag-profession w-condition-invisible"><div class="profession w-dyn-bind-empty"></div></div><div class="w-dyn-list"><div role="list" class="collection-list-7 w-dyn-items"><div role="listitem" class="w-dyn-item"><div fs-cmsfilter-field="tag" class="category-link">Job search</div></div></div></div></div><a href="posts/the-skills-thatll-help-you-thrive----regardless-of-industry.html" class="post-title-link top-padding w-inline-block"><h3 class="h3">The Skills That’ll Help You Thrive — Regardless of Industry</h3></a></div></div><a href="posts/the-skills-thatll-help-you-thrive----regardless-of-industry.html" class="green_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">The Skills That’ll Help You Thrive — Regardless of Industry</h3><div class="text-of-categories-list">Job search</div></a><a style="background-image:none" href="posts/the-skills-thatll-help-you-thrive----regardless-of-industry.html" class="bg_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">The Skills That’ll Help You Thrive — Regardless of Industry</h3><div class="text-of-categories-list">Job search</div><div class="html-embed w-embed w-script"><script>
+//Код для добавления класса с другими стилями к тегам в зеленых карточках, чтобы фичерная статья осталась с прежним визуалом
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenPosts = document.querySelectorAll(".bg_post");
+  greenPosts.forEach(function(post) {
+      const categoryLinks = post.querySelectorAll(".category-link");
+      categoryLinks.forEach(function(link) {
+      link.classList.add("green_card");
+    });
+  });
+});
+</script></div></a></div><div data-w-id="6d99e597-199a-189e-d3c8-dca8a1b1dc45" role="listitem" class="newcollection-item w-dyn-item"><div style="background-image:none" class="post-block"><a href="posts/want-to-really-learn-tech-get-hands-on-experience.html" class="posts-image w-inline-block"><img alt="" src="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/6799eb3c4e7924489d80c3ac_Want to Really Learn Tech_ Get Hands-On.webp" sizes="100vw" srcset="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/6799eb3c4e7924489d80c3ac_Want%20to%20Really%20Learn%20Tech_%20Get%20Hands-On-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/6799eb3c4e7924489d80c3ac_Want%20to%20Really%20Learn%20Tech_%20Get%20Hands-On-p-800.webp 800w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/6799eb3c4e7924489d80c3ac_Want%20to%20Really%20Learn%20Tech_%20Get%20Hands-On-p-1080.webp 1080w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/6799eb3c4e7924489d80c3ac_Want%20to%20Really%20Learn%20Tech_%20Get%20Hands-On-p-1600.webp 1600w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/6799eb3c4e7924489d80c3ac_Want%20to%20Really%20Learn%20Tech_%20Get%20Hands-On.webp 1900w" class="image-2"/></a><div class="post-info-text"><div class="tags"><div class="tag-profession w-condition-invisible"><div class="profession w-dyn-bind-empty"></div></div><div class="w-dyn-list"><div role="list" class="collection-list-7 w-dyn-items"><div role="listitem" class="w-dyn-item"><div fs-cmsfilter-field="tag" class="category-link">How TripleTen works</div></div><div role="listitem" class="w-dyn-item"><div fs-cmsfilter-field="tag" class="category-link">Job search</div></div></div></div></div><a href="posts/want-to-really-learn-tech-get-hands-on-experience.html" class="post-title-link top-padding w-inline-block"><h3 class="h3">Want to Really Learn Tech? Get Hands-On Experience</h3></a></div></div><a href="posts/want-to-really-learn-tech-get-hands-on-experience.html" class="green_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">Want to Really Learn Tech? Get Hands-On Experience</h3><div class="text-of-categories-list">How TripleTen works, Job search</div></a><a style="background-image:none" href="posts/want-to-really-learn-tech-get-hands-on-experience.html" class="bg_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target"></div><h3 class="h3">Want to Really Learn Tech? Get Hands-On Experience</h3><div class="text-of-categories-list">How TripleTen works, Job search</div><div class="html-embed w-embed w-script"><script>
+//Код для добавления класса с другими стилями к тегам в зеленых карточках, чтобы фичерная статья осталась с прежним визуалом
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenPosts = document.querySelectorAll(".bg_post");
+  greenPosts.forEach(function(post) {
+      const categoryLinks = post.querySelectorAll(".category-link");
+      categoryLinks.forEach(function(link) {
+      link.classList.add("green_card");
+    });
+  });
+});
+</script></div></a></div></div><div role="navigation" aria-label="List" class="w-pagination-wrapper pagination-4"><a href="career-advice-start.html" class="previous start-page w-inline-block"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/65e87284cffbe52a30a37e1f_single-arrow.svg" loading="lazy" alt=""/><div class="w-inline-block">Previous page</div></a><a href="index6691.html?974180c2_page=3" aria-label="Previous Page" class="w-pagination-previous previous"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/65e87284cffbe52a30a37e1f_single-arrow.svg" loading="lazy" alt=""/><div class="w-inline-block">Previous page</div></a><div class="navbtns-container"><a fs-cmsload-element="page-button" href="#" class="pagination-btn new">1</a></div><div fs-cmsload-element="page-dots" class="nav-dots">...</div><a href="indexc0c9.html?974180c2_page=5" aria-label="Next Page" class="w-pagination-next previous next"><div class="w-inline-block">Next page</div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/65e87284cffbe52a30a37e1f_single-arrow.svg" loading="lazy" alt="" class="nav-arrow rigth"/></a><link rel="prerender" href="indexc0c9.html?974180c2_page=5"/><div aria-label="Page 4 of 40" role="heading" class="w-page-count embed-hide">4 / 40</div></div></div></div></div></div><section class="section-email"><div class="w-dyn-list"><div role="list" class="w-dyn-items"><div role="listitem" class="w-dyn-item"><div style="background-color:#b69df1" class="email-b-main"><div class="img-wrap-email"><img loading="lazy" alt="" src="../../cdn.prod.website-files.com/6053a5b7250a50f89c543266/652fd121b52e19a9f72d7f2e_techstart_cover-01.png" class="image-email-b-main"/></div><div class="bannerdown-email-b-main"><div><div class="head-email-b-main w-richtext"><p>Breaking into tech</p></div><div class="descr-email-b-main w-richtext"><p>Explore the realities of changing careers and getting into tech in our podcast TechStart</p></div></div><a href="../special/podcast/index.html" class="button-email-r button-main w-inline-block"><div>Listen now</div></a><div class="form-email-b w-condition-invisible w-form"><form id="email-form" name="email-form" data-name="Email Form" method="get" class="form-email-b" data-wf-page-id="65e1a6b7f57db81aec83f398" data-wf-element-id="015f61a9-05ad-df0c-910b-0430311c790c" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"><input class="field-email-b field-email-b-main w-input" maxlength="256" name="Email" data-name="Email" placeholder="hello@email.com" type="email" id="Email-7" required=""/><div class="w-embed"><input type="hidden" name="from" value="blog" />
+<input type="hidden" name="Post" value="bottom" /></div><input type="submit" data-wait="Please wait..." class="buttom-email-b buttom-email-b-main w-button" value="Stay in touch"/><div class="terms-emal-b terms-emal-b-main"><div class="accept-main">By submitting this form, you accept</div><a href="https://docs.tripleten.com/legal/confidential.html" target="_blank" class="accept underline accept-main">Privacy Policy</a><div class="accept-main">and consent to receive marketing emails from TripleTen.</div></div></form><div style="background-color:hsla(258.04511278195486, 100.00%, 73.92%, 0.50)" class="feature-form-success main-form-success w-form-done"><div class="feature-form-s-wrap"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/6508585910f50c0abeb182cb_CheckCircleFilled.svg" loading="lazy" alt="" class="feature-form-check-i main-check-i"/><div>Thank you! <br/>Your submission has been received!</div></div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div></div></div></div></section><div class="collection-list-wrapper-14 w-dyn-list"><div role="list" class="nest-multi-reference w-dyn-items"><div role="listitem" class="w-dyn-item"><a fs-cmsfilter-field="tag" href="#" class="category-link nest-category-link">Externships</a></div><div role="listitem" class="w-dyn-item"><a fs-cmsfilter-field="tag" href="#" class="category-link nest-category-link">Programming languages</a></div><div role="listitem" class="w-dyn-item"><a fs-cmsfilter-field="tag" href="#" class="category-link nest-category-link">Learning resources</a></div><div role="listitem" class="w-dyn-item"><a fs-cmsfilter-field="tag" href="#" class="category-link nest-category-link">How TripleTen works</a></div><div role="listitem" class="w-dyn-item"><a fs-cmsfilter-field="tag" href="#" class="category-link nest-category-link">Student stories</a></div><div role="listitem" class="w-dyn-item"><a fs-cmsfilter-field="tag" href="#" class="category-link nest-category-link">Job profiles</a></div><div role="listitem" class="w-dyn-item"><a fs-cmsfilter-field="tag" href="#" class="category-link nest-category-link">Soft skills</a></div><div role="listitem" class="w-dyn-item"><a fs-cmsfilter-field="tag" href="#" class="category-link nest-category-link">Job search</a></div></div></div><div class="collection-list-wrapper-14 w-dyn-list"><div role="list" class="nest-multi-reference-2 w-dyn-items"><div role="listitem" class="w-dyn-item"><a fs-cmsfilter-field="tag" href="#" class="category-link nest-category-link">Ebook</a></div><div role="listitem" class="w-dyn-item"><a fs-cmsfilter-field="tag" href="#" class="category-link nest-category-link">Quiz</a></div></div></div><div class="latest-posts post-page main_page"><div class="html-embed w-embed w-script"><script>
+//Код для добавления класса с другими стилями к тегам в зеленых карточках, чтобы фичерная статья осталась с прежним визуалом
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenPosts = document.querySelectorAll(".green_post");
+  greenPosts.forEach(function(post) {
+      const categoryLinks = post.querySelectorAll(".category-link");
+      categoryLinks.forEach(function(link) {
+      link.classList.add("green_card");
+    });
+  });
+});
+</script></div><div class="container-post flex"><div class="h3-latest-copy">Browse our resources</div><div class="posts-wrapper"><div class="collection-list-wrapper-14 w-dyn-list"><div role="list" class="nest-multi-reference-3 w-dyn-items"><div role="listitem" class="w-dyn-item"><a href="#" class="category-link nest-category-link-3">Ebook</a></div><div role="listitem" class="w-dyn-item"><a href="#" class="category-link nest-category-link-3">Quiz</a></div></div></div><div class="posts-collection-list-wrapper w-dyn-list"><div role="list" class="posts-collection-list blog-posts-list w-dyn-items"><div data-w-id="76b93620-4d9e-a992-299f-b9bf36f7c2bc" role="listitem" class="newcollection-item category w-dyn-item"><div class="post-block"><a href="resources/quiz-is-it-time-for-you-to-switch-careers.html" class="posts-image w-inline-block"><img src="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/673f636dd8059a2003f5aed1_quiz.webp" loading="lazy" alt="" sizes="100vw" srcset="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/673f636dd8059a2003f5aed1_quiz-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/673f636dd8059a2003f5aed1_quiz-p-800.webp 800w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/673f636dd8059a2003f5aed1_quiz-p-1080.webp 1080w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/673f636dd8059a2003f5aed1_quiz.webp 1835w" class="image-2"/></a><div class="post-info-text"><div class="tags res multi-ref-target-3"></div><a href="resources/quiz-is-it-time-for-you-to-switch-careers.html" class="post-title-link w-inline-block"><h3 class="h3">Quiz: Is It Time for You to Switch Careers?</h3></a><div class="text-of-categories-list-3">Quiz</div></div></div><a href="resources/quiz-is-it-time-for-you-to-switch-careers.html" class="green_post w-inline-block w-condition-invisible"><div class="tags multi-ref-target-3"></div><h3 class="h3">Quiz: Is It Time for You to Switch Careers?</h3><div class="text-of-categories-list-3">Quiz</div></a></div><div data-w-id="76b93620-4d9e-a992-299f-b9bf36f7c2bc" role="listitem" class="newcollection-item category w-dyn-item"><div class="post-block w-condition-invisible"><a href="resources/choosing-tech-to-balance-parenthood-and-work.html" class="posts-image w-inline-block"><img src="../../cdn.prod.website-files.com/6053a5b7250a50f89c543266/66d60cd0bb5c06d0e08cfa35_Cover.png" loading="lazy" alt="" class="image-2"/></a><div class="post-info-text"><div class="tags res multi-ref-target-3"></div><a href="resources/choosing-tech-to-balance-parenthood-and-work.html" class="post-title-link w-inline-block"><h3 class="h3">Being There: Choosing Tech to Balance Parenthood and Work</h3></a><div class="text-of-categories-list-3">Ebook</div></div></div><a href="resources/choosing-tech-to-balance-parenthood-and-work.html" class="green_post w-inline-block"><div class="tags multi-ref-target-3"></div><h3 class="h3">Being There: Choosing Tech to Balance Parenthood and Work</h3><div class="text-of-categories-list-3">Ebook</div></a></div><div data-w-id="76b93620-4d9e-a992-299f-b9bf36f7c2bc" role="listitem" class="newcollection-item category w-dyn-item"><div class="post-block w-condition-invisible"><a href="resources/externships-your-ultimate-guide.html" class="posts-image w-inline-block"><img src="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/66b4e143eb160b740246b29d_Frame 2087328863 (1).webp" loading="lazy" alt="" sizes="100vw" srcset="https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/66b4e143eb160b740246b29d_Frame%202087328863%20(1)-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/66b4e143eb160b740246b29d_Frame%202087328863%20(1)-p-800.webp 800w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/66b4e143eb160b740246b29d_Frame%202087328863%20(1)-p-1080.webp 1080w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/66b4e143eb160b740246b29d_Frame%202087328863%20(1)-p-1600.webp 1600w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/66b4e143eb160b740246b29d_Frame%202087328863%20(1)-p-2000.webp 2000w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/66b4e143eb160b740246b29d_Frame%202087328863%20(1)-p-2600.webp 2600w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/66b4e143eb160b740246b29d_Frame%202087328863%20(1)-p-3200.webp 3200w, https://cdn.prod.website-files.com/6053a5b7250a50f89c543266/66b4e143eb160b740246b29d_Frame%202087328863%20(1).webp 3800w" class="image-2"/></a><div class="post-info-text"><div class="tags res multi-ref-target-3"></div><a href="resources/externships-your-ultimate-guide.html" class="post-title-link w-inline-block"><h3 class="h3">Externships: Your Ultimate Guide</h3></a><div class="text-of-categories-list-3">Ebook</div></div></div><a href="resources/externships-your-ultimate-guide.html" class="green_post w-inline-block"><div class="tags multi-ref-target-3"></div><h3 class="h3">Externships: Your Ultimate Guide</h3><div class="text-of-categories-list-3">Ebook</div></a></div></div></div></div><a href="resources.html" class="button aling-center gradient-btn w-button">Explore More</a></div></div><div class="profession-section-new"><div class="container-post"><div class="career-content"><div class="career_title"><h2 class="career_title_text">Only at TripleTen—the <span class="no-wrap">no‑barriers</span> way into tech <span class="color-green">from $190<sup> /mo</sup></span></h2><div class="career_title_descr">Our investment in you: pre-approved no-interest plans to help start your career switch!</div><div class="career_title_tags"><div class="career-tag"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/6838483cf34c81152ce94dcb_Heart.svg" loading="lazy" alt="" class="career-tag_icon"/><div class="career-tag_text">0% interest</div></div><div class="career-tag"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/6838483c3cff138fa047c04a_EyeCrossed.svg" loading="lazy" alt="" class="career-tag_icon"/><div class="career-tag_text">No credit check!</div></div><div class="career-tag"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/6838483c6f318a8774219cab_CheckCircle.svg" loading="lazy" alt="" class="career-tag_icon"/><div class="career-tag_text">You’re pre-approved!</div></div></div></div><div class="career-wrap-new"><a id="w-node-b882bc4b-0329-d0fa-fbeb-e82adb0c1cdb-d63094b6" href="../software-engineer/index.html" target="_blank" class="career-card new w-inline-block"><div class="career-info"><div><div class="card-tags"><div class="card-tag moths"><div class="career-month">4-9 months</div></div><div class="card-tag green"><div class="career-month">Faster coding with AI</div></div></div><div class="career-name">Software <br/>Engineering</div><div class="career-secription">Build tools and products  that will be used every day.</div></div><div class="career-list"><div><div class="career-card_list-item title">Tuition options:</div><div class="career-card_list-item color-green"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc897a77c9ac71b0f5b_Lightning.svg" loading="lazy" alt="" class="career-tag_icon"/><div>$240/mo with TripleTen <br/>Installments</div></div><div class="career-card_list-item"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc8b06bbe772b90e430_Frame 2087329147.svg" loading="lazy" alt="" class="career-tag_icon"/><div>Upfront to save up to $3,170!</div></div><div class="career-card_list-item"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc8b06bbe772b90e430_Frame 2087329147.svg" loading="lazy" alt="" class="career-tag_icon"/><div>Loans available w/ credit check</div></div></div><div class="career-btn"><div class="career-btn-text">Learn more</div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fe5ea04e9ba5eb5c327f0b_16To24Adapter.svg" loading="lazy" alt="" class="career-svg"/></div></div></div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff6103d21bebce60e9840_Rectangle 34626869.webp" loading="lazy" sizes="(max-width: 479px) 100vw, 240px" srcset="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff6103d21bebce60e9840_Rectangle%2034626869-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff6103d21bebce60e9840_Rectangle%2034626869.webp 564w" alt="" class="career-img"/></a><a id="w-node-d30e8ed8-f2d7-01db-c9ad-6bf68770c138-d63094b6" href="../bi/index.html" target="_blank" class="career-card new w-inline-block"><div class="career-info"><div><div class="card-tags"><div class="card-tag moths"><div class="career-month">4 months</div></div><div class="card-tag green"><div class="career-month">AI for faster data workflows</div></div></div><div class="career-name">Business Intelligence Analytics</div><div class="career-secription">Use accessible tools to make data useful and insightful.</div></div><div class="career-list"><div><div class="career-card_list-item title">Tuition options:</div><div class="career-card_list-item color-green"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc897a77c9ac71b0f5b_Lightning.svg" loading="lazy" alt="" class="career-tag_icon"/><div>$235/mo with TripleTen <br/>Installments</div></div><div class="career-card_list-item"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc8b06bbe772b90e430_Frame 2087329147.svg" loading="lazy" alt="" class="career-tag_icon"/><div>Upfront to save up to $1,910!</div></div><div class="career-card_list-item"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc8b06bbe772b90e430_Frame 2087329147.svg" loading="lazy" alt="" class="career-tag_icon"/><div>Loans available w/ credit check</div></div></div><div class="career-btn"><div class="career-btn-text">Learn more</div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fe5ea04e9ba5eb5c327f0b_16To24Adapter.svg" loading="lazy" alt="" class="career-svg"/></div></div></div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff61028f6b2a0e3952a50_Rectangle 34626869-1.webp" loading="lazy" sizes="(max-width: 479px) 100vw, 240px" srcset="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff61028f6b2a0e3952a50_Rectangle%2034626869-1-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff61028f6b2a0e3952a50_Rectangle%2034626869-1.webp 564w" alt="" class="career-img"/></a><a id="w-node-b958d679-33fc-1e40-b44c-7ff5abfc3af3-d63094b6" href="../cybersecurity/index.html" target="_blank" class="career-card new w-inline-block"><div class="career-info"><div><div class="card-tags"><div class="card-tag moths"><div class="career-month">7 months</div></div><div class="card-tag green"><div class="career-month">AI tools &amp; risks in cyber defense</div></div></div><div class="career-name">Cyber Security  </div><div class="career-secription">Protect people, organizations, networks, and data.</div></div><div class="career-list"><div><div class="career-card_list-item title">Tuition options:</div><div class="career-card_list-item color-green"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc897a77c9ac71b0f5b_Lightning.svg" loading="lazy" alt="" class="career-tag_icon"/><div>$240/mo with TripleTen <br/>Installments</div></div><div class="career-card_list-item"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc8b06bbe772b90e430_Frame 2087329147.svg" loading="lazy" alt="" class="career-tag_icon"/><div>Upfront to save up to $3,170!</div></div><div class="career-card_list-item"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc8b06bbe772b90e430_Frame 2087329147.svg" loading="lazy" alt="" class="career-tag_icon"/><div>Loans available w/ credit check</div></div></div><div class="career-btn"><div class="career-btn-text">Learn more</div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fe5ea04e9ba5eb5c327f0b_16To24Adapter.svg" loading="lazy" alt="" class="career-svg"/></div></div></div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff610d4b4c6dfd64d51fe_Rectangle 34626869-3.webp" loading="lazy" sizes="(max-width: 479px) 100vw, 240px" srcset="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff610d4b4c6dfd64d51fe_Rectangle%2034626869-3-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff610d4b4c6dfd64d51fe_Rectangle%2034626869-3.webp 564w" alt="" class="career-img"/></a><a id="w-node-_4aedcb08-85e3-c029-d638-f12cccb71e66-d63094b6" href="../data-science/index.html" target="_blank" class="career-card new w-inline-block"><div class="career-info"><div><div class="card-tags"><div class="card-tag moths"><div class="career-month">8 months</div></div><div class="card-tag green"><div class="career-month">LLMs &amp; Generative AI training</div></div></div><div class="career-name">Data Science</div><div class="career-secription">Train AI/ML models, turn raw data into predictions.</div></div><div class="career-list"><div><div class="career-card_list-item title">Tuition options:</div><div class="career-card_list-item color-green"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc897a77c9ac71b0f5b_Lightning.svg" loading="lazy" alt="" class="career-tag_icon"/><div>$240/mo with TripleTen <br/>Installments</div></div><div class="career-card_list-item"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc8b06bbe772b90e430_Frame 2087329147.svg" loading="lazy" alt="" class="career-tag_icon"/><div>Upfront to save up to $3,170!</div></div><div class="career-card_list-item"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc8b06bbe772b90e430_Frame 2087329147.svg" loading="lazy" alt="" class="career-tag_icon"/><div>Loans available w/ credit check</div></div></div><div class="career-btn"><div class="career-btn-text">Learn more</div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fe5ea04e9ba5eb5c327f0b_16To24Adapter.svg" loading="lazy" alt="" class="career-svg"/></div></div></div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff61392c27e1655a95937_Rectangle 34626869-4.webp" loading="lazy" sizes="(max-width: 479px) 100vw, 240px" srcset="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff61392c27e1655a95937_Rectangle%2034626869-4-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff61392c27e1655a95937_Rectangle%2034626869-4.webp 564w" alt="" class="career-img"/></a><a id="w-node-df84236e-b448-42ed-6d74-e327fb3c8806-d63094b6" href="../uxui-design/index.html" target="_blank" class="career-card new w-inline-block"><div class="career-info"><div><div class="card-tags"><div class="card-tag moths"><div class="career-month">5 months</div></div><div class="card-tag green"><div class="career-month">AI-assisted UI design &amp; prototyping</div></div></div><div class="career-name">UX/UI Design</div><div class="career-secription">Design apps, websites, and other digital products.</div></div><div class="career-list"><div><div class="career-card_list-item title">Tuition options:</div><div class="career-card_list-item color-green"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc897a77c9ac71b0f5b_Lightning.svg" loading="lazy" alt="" class="career-tag_icon"/><div>$210/mo with TripleTen <br/>Installments</div></div><div class="career-card_list-item"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc8b06bbe772b90e430_Frame 2087329147.svg" loading="lazy" alt="" class="career-tag_icon"/><div>Upfront to save up to $1,610!</div></div><div class="career-card_list-item"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc8b06bbe772b90e430_Frame 2087329147.svg" loading="lazy" alt="" class="career-tag_icon"/><div>Loans available w/ credit check</div></div></div><div class="career-btn"><div class="career-btn-text">Learn more</div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fe5ea04e9ba5eb5c327f0b_16To24Adapter.svg" loading="lazy" alt="" class="career-svg"/></div></div></div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff611f95ec0e1b50c26c9_Rectangle 34626869-5.webp" loading="lazy" sizes="(max-width: 479px) 100vw, 240px" srcset="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff611f95ec0e1b50c26c9_Rectangle%2034626869-5-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff611f95ec0e1b50c26c9_Rectangle%2034626869-5.webp 564w" alt="" class="career-img"/></a><a id="w-node-_0bce915d-301f-3a58-b74b-7f8540b0a8f3-d63094b6" href="../qa-engineer/index.html" target="_blank" class="career-card new w-inline-block"><div class="career-info"><div><div class="card-tags"><div class="card-tag moths"><div class="career-month">5 months</div></div><div class="card-tag green"><div class="career-month">AI-powered testing automation</div></div></div><div class="career-name">Quality Assurance</div><div class="career-secription">Break software and document the results, without knowing code.</div></div><div class="career-list"><div><div class="career-card_list-item title">Tuition options:</div><div class="career-card_list-item color-green"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc897a77c9ac71b0f5b_Lightning.svg" loading="lazy" alt="" class="career-tag_icon"/><div>$190/mo with TripleTen <br/>Installments</div></div><div class="career-card_list-item"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc8b06bbe772b90e430_Frame 2087329147.svg" loading="lazy" alt="" class="career-tag_icon"/><div>Upfront to save up to $1,590!</div></div><div class="career-card_list-item"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc8b06bbe772b90e430_Frame 2087329147.svg" loading="lazy" alt="" class="career-tag_icon"/><div>Loans available w/ credit check</div></div></div><div class="career-btn"><div class="career-btn-text">Learn more</div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fe5ea04e9ba5eb5c327f0b_16To24Adapter.svg" loading="lazy" alt="" class="career-svg"/></div></div></div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff61170a050cd38232dc0_Rectangle 34626869-2.webp" loading="lazy" sizes="(max-width: 479px) 100vw, 240px" srcset="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff61170a050cd38232dc0_Rectangle%2034626869-2-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fff61170a050cd38232dc0_Rectangle%2034626869-2.webp 564w" alt="" class="career-img"/></a><a id="w-node-efbfbcff-3fea-20d8-e690-be2afe5d4f4d-d63094b6" href="../ai-automation/index.html" target="_blank" class="career-card new w-inline-block"><div class="career-info"><div><div class="card-tags"><div class="card-tag moths"><div class="career-month">4 months</div></div><div class="card-tag green"><div class="career-month">AI tools for business ops</div></div></div><div class="career-name">AI Automation</div><div class="career-secription">Automate routine tasks to make work fly.</div></div><div class="career-list"><div><div class="career-card_list-item title">Tuition options:</div><div class="career-card_list-item color-green"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc897a77c9ac71b0f5b_Lightning.svg" loading="lazy" alt="" class="career-tag_icon"/><div>$210/mo with TripleTen <br/>Installments</div></div><div class="career-card_list-item"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc8b06bbe772b90e430_Frame 2087329147.svg" loading="lazy" alt="" class="career-tag_icon"/><div>Upfront to save up to $1,610!</div></div><div class="career-card_list-item"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/68384bc8b06bbe772b90e430_Frame 2087329147.svg" loading="lazy" alt="" class="career-tag_icon"/><div>Loans available w/ credit check</div></div></div><div class="career-btn"><div class="career-btn-text">Learn more</div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fe5ea04e9ba5eb5c327f0b_16To24Adapter.svg" loading="lazy" alt="" class="career-svg"/></div></div></div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/683d5d3344b76ab2a1786a67_Rectangle 34626869.webp" loading="lazy" sizes="(max-width: 479px) 100vw, 270.71875px" srcset="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/683d5d3344b76ab2a1786a67_Rectangle%2034626869-p-500.webp 500w, https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/683d5d3344b76ab2a1786a67_Rectangle%2034626869.webp 564w" alt="" class="career-img"/></a><a id="w-node-_09901a7d-f396-5fab-528e-b067a8185bac-d63094b6" href="../quiz/career-quiz-nc/index.html" target="_blank" class="career-card new quiz w-inline-block"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/683858feea963bd2b4974b7f_Group 2087326914.webp" loading="lazy" alt="" class="quiz-card_img1"/><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/683858feab9a7ce3b8d9a25f_Group 2087326916.webp" loading="lazy" alt="" class="quiz-card_img2"/><div class="quiz-card_content"><div class="quiz-card_title">Not sure? <br/>Take a career quiz</div><div class="quiz-card_descr">Find your path in under 5 minutes</div><div class="career-btn static"><div class="career-btn-text big">Take the quiz</div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fe5ea04e9ba5eb5c327f0b_16To24Adapter.svg" loading="lazy" alt="" class="career-svg big"/></div></div></a></div><a href="../quiz/career-quiz-nc/index.html" target="_blank" class="career-card new quiz tab w-inline-block"><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/683858feea963bd2b4974b7f_Group 2087326914.webp" loading="lazy" alt="" class="quiz-card_img1"/><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/683858feab9a7ce3b8d9a25f_Group 2087326916.webp" loading="lazy" alt="" class="quiz-card_img2"/><div class="quiz-card_content"><div class="quiz-card_title">Not sure? Take <br/>a career quiz</div><div class="quiz-card_descr">Find your path in under 5 minutes</div><div class="career-btn static"><div class="career-btn-text big">Take the quiz</div><img src="https://cdn.prod.website-files.com/6053a5b7250a503b3254324e/66fe5ea04e9ba5eb5c327f0b_16To24Adapter.svg" loading="lazy" alt="" class="career-svg big"/></div></div></a></div><div class="w-embed"><style>
+@media (min-width: 1280px){
+	.career-card:hover .career-btn {
+    opacity: 1;
+  }
+}
+</style></div></div></div><footer class="footer-new empty"><div id="footer"></div><div class="w-embed w-script"><script>
+onHeaderLoaded(() => {
+  mountFooter("#footer")
+})
+</script></div></footer><script src="../../d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8b828.js?site=6053a5b7250a503b3254324e" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="../../cdn.prod.website-files.com/6053a5b7250a503b3254324e/js/webflow.schunk.14b08a85f8eb87f3.js" type="text/javascript"></script><script src="../../cdn.prod.website-files.com/6053a5b7250a503b3254324e/js/webflow.schunk.e8d273f5131e6615.js" type="text/javascript"></script><script src="../../cdn.prod.website-files.com/6053a5b7250a503b3254324e/js/webflow.0589cc3f.c2221504fc5479d5.js" type="text/javascript"></script><script type="text/javascript" async src="../../l.getsitecontrol.com/lw1x81m4.js"></script>
+
+<script>
+var _hsq = window._hsq = window._hsq || [];
+_hsq.push(['setContentType', 'blog-post']);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="../../js-eu1.hs-scripts.com/25196166.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+$(document).ready(function() {
+  const currentUrlMain = window.location.href;
+  
+  if (currentUrlMain.includes('index.html')) {
+   $('.search-wrap-header').attr('action', '/blog/search');
+  }
+  
+  const prevUrl = sessionStorage.getItem("prevUrl")
+
+  if (prevUrl && currentUrlMain.includes('../posts/index.html')) {
+      $('.link-to-blog').attr('href', prevUrl);
+      $('.link-to-blog div').text('Back');
+  }
+  
+  if (prevUrl && ($('.link-404').length > 0)) {
+      $('.link-to-blog').attr('href', prevUrl);
+  }
+
+	sessionStorage.setItem('prevUrl', currentUrlMain);
+  
+  if (window.matchMedia("(max-width: 479px)").matches) {
+    $('.search-input').on('input', function() {
+      if ($(this).val() !== '') {
+        $('.search-submit-header').show();
+      } else {
+      	$('.search-submit-header').hide();
+      }
+    });
+  }
+});
+</script>
+
+<script>
+const headerChanges = () => {
+  if (window.matchMedia("(max-width: 991px)").matches) {
+    if ($(window).scrollTop() > 50) {
+      $('.burger-button').addClass('burger-button-scroll');
+      $('.navigation-button').addClass('navigation-button-hidden');
+      $('.logo').addClass('logo-hidden');
+    } else {
+      $('.burger-button').removeClass('burger-button-scroll');
+      $('.navigation-button').removeClass('navigation-button-hidden');
+      $('.logo').removeClass('logo-hidden');
+    };
+    $('.nav-wrap').removeClass('nav-wrap-scroll');
+  } else {
+    if ($(window).scrollTop() > 50) {
+      $('.nav-wrap').addClass('nav-wrap-scroll');
+    } else {
+      $('.nav-wrap').removeClass('nav-wrap-scroll');
+    };
+  }
+};
+$(window).scroll(function() {
+  headerChanges();
+});
+$(window).on('resize', function() {
+  headerChanges();
+});
+$('.cross-icon-search.cross-tablet').click(function() {
+  $('.search-wrap-header.search-wrap-tablet').hide();
+});
+</script>
+
+
+<script>
+  /* Rainbow v2.1.4 rainbowco.de | included languages: css, generic, html, javascript, json, php, python */!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):e.Rainbow=t()}(this,function(){"use strict";function e(){return"undefined"!=typeof module&&"object"==typeof module.exports}function t(){return"undefined"==typeof document&&"undefined"!=typeof self}function n(e){var t=e.getAttribute("data-language")||e.parentNode.getAttribute("data-language");if(!t){var n=/\blang(?:uage)?-(\w+)/,r=e.className.match(n)||e.parentNode.className.match(n);r&&(t=r[1])}return t?t.toLowerCase():null}function r(e,t,n,r){return(n!==e||r!==t)&&(n<=e&&r>=t)}function a(e){return e.replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/&(?![\w\#]+;)/g,"&amp;")}function o(e,t){for(var n=0,r=1;r<t;++r)e[r]&&(n+=e[r].length);return n}function i(e,t,n,r){return n>=e&&n<t||r>e&&r<t}function s(e){var t=[];for(var n in e)e.hasOwnProperty(n)&&t.push(n);return t.sort(function(e,t){return t-e})}function u(e,t,n,r){var a=r.substr(e);return r.substr(0,e)+a.replace(t,n)}function c(t,Prism){if(e())return global.Worker=require("webworker-threads").Worker,new Worker(__filename);var n=Prism.toString(),c=s.toString();c+=a.toString(),c+=r.toString(),c+=i.toString(),c+=u.toString(),c+=o.toString(),c+=n;var l=c+"\tthis.onmessage="+t.toString(),f=new Blob([l],{type:"text/javascript"});return new Worker((window.URL||window.webkitURL).createObjectURL(f))}function l(e){function t(){self.postMessage({id:n.id,lang:n.lang,result:a})}var n=e.data,r=new Prism(n.options),a=r.refract(n.code,n.lang);return n.isNode?(t(),void self.close()):void setTimeout(function(){t()},1e3*n.options.delay)}function f(){return(R||null===j)&&(j=c(l,Prism)),j}function d(e,t){function n(a){a.data.id===e.id&&(t(a.data),r.removeEventListener("message",n))}var r=f();r.addEventListener("message",n),r.postMessage(e)}function g(e,t,n){return function(r){e.innerHTML=r.result,e.classList.remove("loading"),e.classList.add("rainbow-show"),"PRE"===e.parentNode.tagName&&(e.parentNode.classList.remove("loading"),e.parentNode.classList.add("rainbow-show")),M&&M(e,r.lang),0===--t.c&&n()}}function m(e){return{patterns:C,inheritenceMap:S,aliases:T,globalClass:e.globalClass,delay:isNaN(e.delay)?0:e.delay}}function v(e,t){var n={};"object"==typeof t&&(n=t,t=n.language),t=T[t]||t;var r={id:A++,code:e,lang:t,options:m(n),isNode:R};return r}function p(e,t){for(var r={c:0},a=0,o=e;a<o.length;a+=1){var i=o[a],s=n(i);if(!i.classList.contains("rainbow")&&s){i.classList.add("loading"),i.classList.add("rainbow"),"PRE"===i.parentNode.tagName&&i.parentNode.classList.add("loading");var u=i.getAttribute("data-global-class"),c=parseInt(i.getAttribute("data-delay"),10);++r.c,d(v(i.innerHTML,{language:s,globalClass:u,delay:c}),g(i,r,t))}}0===r.c&&t()}function h(e){var t=document.createElement("div");t.className="preloader";for(var n=0;n<7;n++)t.appendChild(document.createElement("div"));e.appendChild(t)}function b(e,t){t=t||function(){},e=e&&"function"==typeof e.getElementsByTagName?e:document;for(var n=e.getElementsByTagName("pre"),r=e.getElementsByTagName("code"),a=[],o=[],i=0,s=n;i<s.length;i+=1){var u=s[i];h(u),u.getElementsByTagName("code").length?u.getAttribute("data-trimmed")||(u.setAttribute("data-trimmed",!0),u.innerHTML=u.innerHTML.trim()):a.push(u)}for(var c=0,l=r;c<l.length;c+=1){var f=l[c];o.push(f)}p(o.concat(a),t)}function w(e){M=e}function y(e,t,n){S[e]||(S[e]=n),C[e]=t.concat(C[e]||[])}function L(e){delete S[e],delete C[e]}function N(){for(var e=[],t=arguments.length;t--;)e[t]=arguments[t];if("string"==typeof e[0]){var n=v(e[0],e[1]);return void d(n,function(e){return function(t){e&&e(t.result,t.lang)}}(e[2]))}return"function"==typeof e[0]?void b(0,e[0]):void b(e[0],e[1])}function E(e,t){T[e]=t}var M,Prism=function Prism(e){function t(e,t){for(var n in h)if(n=parseInt(n,10),r(n,h[n],e,t)&&(delete h[n],delete p[n]),i(n,h[n],e,t))return!0;return!1}function n(t,n){var r=t.replace(/\./g," "),a=e.globalClass;return a&&(r+=" "+a),'<span class="'+r+'">'+n+"</span>"}function c(e){for(var t=s(p),n=0,r=t;n<r.length;n+=1){var a=r[n],o=p[a];e=u(a,o.replace,o["with"],e)}return e}function l(e){var t="";return e.ignoreCase&&(t+="i"),e.multiline&&(t+="m"),new RegExp(e.source,t)}function f(r,a,i){function c(e){return r.name&&(e=n(r.name,e)),p[w]={replace:m[0],"with":e},h[w]=y,!g&&{remaining:a.substr(y-i),offset:y}}function f(t){var a=m[t];if(a){var i=r.matches[t],s=i.language,c=i.name&&i.matches?i.matches:i,l=function(e,r,a){b=u(o(m,t),e,a?n(a,r):r,b)};if("string"==typeof i)return void l(a,a,i);var f,d=new Prism(e);if(s)return f=d.refract(a,s),void l(a,f);f=d.refract(a,v,c.length?c:[c]),l(a,f,i.matches?i.name:0)}}void 0===i&&(i=0);var d=r.pattern;if(!d)return!1;var g=!d.global;d=l(d);var m=d.exec(a);if(!m)return!1;!r.name&&r.matches&&"string"==typeof r.matches[0]&&(r.name=r.matches[0],delete r.matches[0]);var b=m[0],w=m.index+i,y=m[0].length+w;if(w===y)return!1;if(t(w,y))return{remaining:a.substr(y-i),offset:y};for(var L=s(r.matches),N=0,E=L;N<E.length;N+=1){var M=E[N];f(M)}return c(b)}function d(e,t){for(var n=0,r=t;n<r.length;n+=1)for(var a=r[n],o=f(a,e);o;)o=f(a,o.remaining,o.offset);return c(e)}function g(t){for(var n=e.patterns[t]||[];e.inheritenceMap[t];)t=e.inheritenceMap[t],n=n.concat(e.patterns[t]||[]);return n}function m(e,t,n){return v=t,n=n||g(t),d(a(e),n)}var v,p={},h={};this.refract=m},C={},S={},T={},x={},A=0,R=e(),k=t(),j=null;x={extend:y,remove:L,onHighlight:w,addAlias:E,color:N},R&&(x.colorSync=function(e,t){var n=v(e,t),r=new Prism(n.options);return r.refract(n.code,n.lang)}),R||k||document.addEventListener("DOMContentLoaded",function(e){x.defer||x.color(e)},!1),k&&(self.onmessage=l);var B=x;return B});
+Rainbow.extend("css",[{name:"comment",pattern:/\/\*[\s\S]*?\*\//gm},{name:"constant.hex-color",pattern:/#([a-f0-9]{3}|[a-f0-9]{6})(?=;|\s|,|\))/gi},{matches:{1:"constant.numeric",2:"keyword.unit"},pattern:/(\d+)(px|em|cm|s|%)?/g},{name:"string",pattern:/('|")(.*?)\1/g},{name:"support.css-property",matches:{1:"support.vendor-prefix"},pattern:/(-o-|-moz-|-webkit-|-ms-)?[\w-]+(?=\s?:)(?!.*\{)/g},{matches:{1:[{name:"entity.name.sass",pattern:/&amp;/g},{name:"direct-descendant",pattern:/&gt;/g},{name:"entity.name.class",pattern:/\.[\w\-_]+/g},{name:"entity.name.id",pattern:/\#[\w\-_]+/g},{name:"entity.name.pseudo",pattern:/:[\w\-_]+/g},{name:"entity.name.tag",pattern:/\w+/g}]},pattern:/([\w\ ,\n:\.\#\&\;\-_]+)(?=.*\{)/g},{matches:{2:"support.vendor-prefix",3:"support.css-value"},pattern:/(:|,)\s*(-o-|-moz-|-webkit-|-ms-)?([a-zA-Z-]*)(?=\b)(?!.*\{)/g}]),Rainbow.addAlias("scss","css"),Rainbow.extend("generic",[{matches:{1:[{name:"keyword.operator",pattern:/\=|\+/g},{name:"keyword.dot",pattern:/\./g}],2:{name:"string",matches:{name:"constant.character.escape",pattern:/\\('|"){1}/g}}},pattern:/(\(|\s|\[|\=|:|\+|\.|\{|,)(('|")([^\\\1]|\\.)*?(\3))/gm},{name:"comment",pattern:/\/\*[\s\S]*?\*\/|(\/\/|\#)(?!.*('|").*?[^:](\/\/|\#)).*?$/gm},{name:"constant.numeric",pattern:/\b(\d+(\.\d+)?(e(\+|\-)?\d+)?(f|d)?|0x[\da-f]+)\b/gi},{matches:{1:"keyword"},pattern:/\b(and|array|as|b(ool(ean)?|reak)|c(ase|atch|har|lass|on(st|tinue))|d(ef|elete|o(uble)?)|e(cho|lse(if)?|xit|xtends|xcept)|f(inally|loat|or(each)?|unction)|global|if|import|int(eger)?|long|new|object|or|pr(int|ivate|otected)|public|return|self|st(ring|ruct|atic)|switch|th(en|is|row)|try|(un)?signed|var|void|while)(?=\b)/gi},{name:"constant.language",pattern:/true|false|null/g},{name:"keyword.operator",pattern:/\+|\!|\-|&(gt|lt|amp);|\||\*|\=/g},{matches:{1:"function.call"},pattern:/(\w+?)(?=\()/g},{matches:{1:"storage.function",2:"entity.name.function"},pattern:/(function)\s(.*?)(?=\()/g}]),Rainbow.extend("html",[{name:"source.php.embedded",matches:{1:"variable.language.php-tag",2:{language:"php"},3:"variable.language.php-tag"},pattern:/(&lt;\?php|&lt;\?=?(?!xml))([\s\S]*?)(\?&gt;)/gm},{name:"source.css.embedded",matches:{1:{matches:{1:"support.tag.style",2:[{name:"entity.tag.style",pattern:/^style/g},{name:"string",pattern:/('|")(.*?)(\1)/g},{name:"entity.tag.style.attribute",pattern:/(\w+)/g}],3:"support.tag.style"},pattern:/(&lt;\/?)(style.*?)(&gt;)/g},2:{language:"css"},3:"support.tag.style",4:"entity.tag.style",5:"support.tag.style"},pattern:/(&lt;style.*?&gt;)([\s\S]*?)(&lt;\/)(style)(&gt;)/gm},{name:"source.js.embedded",matches:{1:{matches:{1:"support.tag.script",2:[{name:"entity.tag.script",pattern:/^script/g},{name:"string",pattern:/('|")(.*?)(\1)/g},{name:"entity.tag.script.attribute",pattern:/(\w+)/g}],3:"support.tag.script"},pattern:/(&lt;\/?)(script.*?)(&gt;)/g},2:{language:"javascript"},3:"support.tag.script",4:"entity.tag.script",5:"support.tag.script"},pattern:/(&lt;script(?! src).*?&gt;)([\s\S]*?)(&lt;\/)(script)(&gt;)/gm},{name:"comment.html",pattern:/&lt;\!--[\S\s]*?--&gt;/g},{matches:{1:"support.tag.open",2:"support.tag.close"},pattern:/(&lt;)|(\/?\??&gt;)/g},{name:"support.tag",matches:{1:"support.tag",2:"support.tag.special",3:"support.tag-name"},pattern:/(&lt;\??)(\/|\!?)(\w+)/g},{matches:{1:"support.attribute"},pattern:/([a-z-]+)(?=\=)/gi},{matches:{1:"support.operator",2:"string.quote",3:"string.value",4:"string.quote"},pattern:/(=)('|")(.*?)(\2)/g},{matches:{1:"support.operator",2:"support.value"},pattern:/(=)([a-zA-Z\-0-9]*)\b/g},{matches:{1:"support.attribute"},pattern:/\s([\w-]+)(?=\s|&gt;)(?![\s\S]*&lt;)/g}]),Rainbow.addAlias("xml","html"),Rainbow.extend("javascript",[{name:"selector",pattern:/\$(?=\.|\()/g},{name:"support",pattern:/\b(window|document)\b/g},{name:"keyword",pattern:/\b(export|default|from)\b/g},{name:"function.call",pattern:/\b(then)(?=\()/g},{name:"variable.language.this",pattern:/\bthis\b/g},{name:"variable.language.super",pattern:/super(?=\.|\()/g},{name:"storage.type",pattern:/\b(const|let|var)(?=\s)/g},{matches:{1:"support.property"},pattern:/\.(length|node(Name|Value))\b/g},{matches:{1:"support.function"},pattern:/(setTimeout|setInterval)(?=\()/g},{matches:{1:"support.method"},pattern:/\.(getAttribute|replace|push|getElementById|getElementsByClassName|setTimeout|setInterval)(?=\()/g},{name:"string.regexp",matches:{1:"string.regexp.open",2:{name:"constant.regexp.escape",pattern:/\\(.){1}/g},3:"string.regexp.close",4:"string.regexp.modifier"},pattern:/(\/)((?![*+?])(?:[^\r\n\[\/\\]|\\.|\[(?:[^\r\n\]\\]|\\.)*\])+)(\/)(?!\/)([igm]{0,3})/g},{matches:{1:"storage.type",3:"entity.function"},pattern:/(var)?(\s|^)(\S+)(?=\s?=\s?function\()/g},{matches:{1:"keyword",2:"variable.type"},pattern:/(new)\s+(?!Promise)([^\(]*)(?=\()/g},{name:"entity.function",pattern:/(\w+)(?=:\s{0,}function)/g},{name:"constant.other",pattern:/\*(?= as)/g},{matches:{1:"keyword",2:"constant.other"},pattern:/(export)\s+(\*)/g},{matches:{1:"storage.type.accessor",2:"entity.name.function"},pattern:/(get|set)\s+(\w+)(?=\()/g},{matches:{2:"entity.name.function"},pattern:/(^\s*)(\w+)(?=\([^\)]*?\)\s*\{)/gm},{matches:{1:"storage.type.html",2:"entity.name.html",3:"storage.modifier.extends",4:"entity.other.inherited-class"},pattern:/(class)\s+(\w+)(?:\s+(extends)\s+(\w+))?(?=\s*\{)/g},{name:"storage.type.function.arrow",pattern:/=&gt;/g},{name:"support.class.promise",pattern:/\bPromise(?=(\(|\.))/g}],"generic"),Rainbow.addAlias("js","javascript"),Rainbow.extend("json",[{matches:{0:{name:"string",matches:{name:"constant.character.escape",pattern:/\\('|"){1}/g}}},pattern:/(\"|\')(\\?.)*?\1/g},{name:"constant.numeric",pattern:/\b(-?(0x)?\d*\.?[\da-f]+|NaN|-?Infinity)\b/gi},{name:"constant.language",pattern:/\b(true|false|null)\b/g}]),Rainbow.extend("php",[{name:"support",pattern:/\becho\b/gi},{matches:{1:"variable.dollar-sign",2:"variable"},pattern:/(\$)(\w+)\b/g},{name:"constant.language",pattern:/true|false|null/gi},{name:"constant",pattern:/\b[A-Z0-9_]{2,}\b/g},{name:"keyword.dot",pattern:/\./g},{name:"keyword",pattern:/\b(die|end(for(each)?|switch|if)|case|require(_once)?|include(_once)?)(?=\b)/gi},{matches:{1:"keyword",2:{name:"support.class",pattern:/\w+/g}},pattern:/(instanceof)\s([^\$].*?)(\)|;)/gi},{matches:{1:"support.function"},pattern:/\b(array(_key_exists|_merge|_keys|_shift)?|isset|count|empty|unset|printf|is_(array|string|numeric|object)|sprintf|each|date|time|substr|pos|str(len|pos|tolower|_replace|totime)?|ord|trim|in_array|implode|end|preg_match|explode|fmod|define|link|list|get_class|serialize|file|sort|mail|dir|idate|log|intval|header|chr|function_exists|dirname|preg_replace|file_exists)(?=\()/gi},{name:"variable.language.php-tag",pattern:/(&lt;\?(php)?|\?&gt;)/gi},{matches:{1:"keyword.namespace",2:{name:"support.namespace",pattern:/\w+/g}},pattern:/\b(namespace|use)\s(.*?);/gi},{matches:{1:"storage.modifier",2:"storage.class",3:"entity.name.class",4:"storage.modifier.extends",5:"entity.other.inherited-class",6:"storage.modifier.extends",7:"entity.other.inherited-class"},pattern:/\b(abstract|final)?\s?(class|interface|trait)\s(\w+)(\sextends\s)?([\w\\]*)?(\simplements\s)?([\w\\]*)?\s?\{?(\n|\})/gi},{name:"keyword.static",pattern:/self::|static::/gi},{matches:{1:"storage.function",2:"entity.name.function.magic"},pattern:/(function)\s(__.*?)(?=\()/gi},{matches:{1:"storage.function",2:"entity.name.function"},pattern:/(function)\s(.*?)(?=\()/gi},{matches:{1:"keyword.new",2:{name:"support.class",pattern:/\w+/g}},pattern:/\b(new)\s([^\$][a-z0-9_\\]*?)(?=\)|\(|;)/gi},{matches:{1:{name:"support.class",pattern:/\w+/g},2:"keyword.static"},pattern:/([\w\\]*?)(::)(?=\b|\$)/g},{matches:{2:{name:"support.class",pattern:/\w+/g}},pattern:/(\(|,\s?)([\w\\]*?)(?=\s\$)/g}],"generic"),Rainbow.extend("python",[{name:"variable.self",pattern:/self/g},{name:"constant.language",pattern:/None|True|False|NotImplemented|\.\.\./g},{name:"support.object",pattern:/object/g},{name:"support.function.python",pattern:/\b(bs|divmod|input|open|staticmethod|all|enumerate|int|ord|str|any|eval|isinstance|pow|sum|basestring|execfile|issubclass|print|super|bin|file|iter|property|tuple|bool|filter|len|range|type|bytearray|float|list|raw_input|unichr|callable|format|locals|reduce|unicode|chr|frozenset|long|reload|vars|classmethod|getattr|map|repr|xrange|cmp|globals|max|reversed|zip|compile|hasattr|memoryview|round|__import__|complex|hash|min|set|apply|delattr|help|next|setattr|buffer|dict|hex|object|slice|coerce|dir|id|oct|sorted|intern)(?=\()/g},{matches:{1:"keyword"},pattern:/\b(pass|lambda|with|is|not|in|from|elif|raise|del)(?=\b)/g},{matches:{1:"storage.class",2:"entity.name.class",3:"entity.other.inherited-class"},pattern:/(class)\s+(\w+)\((\w+?)\)/g},{matches:{1:"storage.function",2:"support.magic"},pattern:/(def)\s+(__\w+)(?=\()/g},{name:"support.magic",pattern:/__(name)__/g},{matches:{1:"keyword.control",2:"support.exception.type"},pattern:/(except) (\w+):/g},{matches:{1:"storage.function",2:"entity.name.function"},pattern:/(def)\s+(\w+)(?=\()/g},{name:"entity.name.function.decorator",pattern:/@([\w\.]+)/g},{name:"comment.docstring",pattern:/('{3}|"{3})[\s\S]*?\1/gm}],"generic");
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHNCHJ5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+  
+  $(".challenge__hidden").each(function() {
+    var lvl = $(this);
+    i = 0;
+    lvl.next('.challenge__blocks').find('.challenge__block').each(function() {
+      var block = $(this);
+      if (i < lvl.text()) {
+        block.addClass('challenge__block-active');
+      };
+      i += 1;
+    });
+  });
+  
+  
+	//обновление тегов при клике на фильтр
+  // Получаем все элементы с классом "sort-button"
+  const buttons = document.querySelectorAll('.sort-button');
+
+  // Добавляем обработчик события "click" для каждой кнопки
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+     	var customBlogPosts2 = new FsLibrary('.blog-posts-list')
+			setTimeout(() => { 
+      	customBlogPosts2.nest({
+           textList: '.text-of-categories-list',  
+           nestSource: '.nest-multi-reference',  
+           nestTarget: '.multi-ref-target'  
+        })
+        const greenPosts2 = document.querySelectorAll(".green_post");
+        greenPosts2.forEach(function(post) {
+            const categoryLinks2 = post.querySelectorAll(".category-link");
+            categoryLinks2.forEach(function(link) {
+            link.classList.add("green_card");
+          });
+        });
+      }, 500); 
+    // run nest on our instance
+    
+    });
+  });
+});
+</script>
+
+<script>
+let list = document.querySelector('.collection-list-5');
+let viewAll = document.createElement('a');
+viewAll.className = "sort-button fltr-active";
+viewAll.innerHTML = "<div class='tag-text'>View all</div>";
+list.prepend(viewAll);
+viewAll.setAttribute('fs-cmsfilter-element', 'clear');
+</script>
+
+
+<!-- F'in sweet CMS Library for Webflow -->
+<script src="../../cdn.jsdelivr.net/npm/%40finsweet/cms-library%401/cms-library.js"></script>
+<script>
+// immediately/self invoked function. This function executes right away
+(async function() {
+  // create a new Library instance and store it in a variable called "customBlogPosts"
+  var customBlogPosts = new FsLibrary('.blog-posts-list')
+
+  // run nest on our instance
+  customBlogPosts.nest({
+     textList: '.text-of-categories-list',  // plaintext comma separated list
+     nestSource: '.nest-multi-reference',  // CMS list we are taking real tags from
+     nestTarget: '.multi-ref-target'  // where we paste the items from nestSource
+  })
+})();
+
+//for resources tags in featured card
+(async function() {
+  // create a new Library instance and store it in a variable called "customBlogPosts"
+  var customBlogPosts = new FsLibrary('.blog-posts-list')
+
+  // run nest on our instance
+  customBlogPosts.nest({
+     textList: '.text-of-categories-list-2',  // plaintext comma separated list
+     nestSource: '.nest-multi-reference-2',  // CMS list we are taking real tags from
+     nestTarget: '.multi-ref-target-2'  // where we paste the items from nestSource
+  })
+})();
+
+//for resources block explore more
+(async function() {
+  // create a new Library instance and store it in a variable called "customBlogPosts"
+  var customBlogPosts = new FsLibrary('.blog-posts-list')
+
+  // run nest on our instance
+  customBlogPosts.nest({
+     textList: '.text-of-categories-list-3',  // plaintext comma separated list
+     nestSource: '.nest-multi-reference-3',  // CMS list we are taking real tags from
+     nestTarget: '.multi-ref-target-3'  // where we paste the items from nestSource
+  })
+})();
+</script>
+
+<script>
+(function() {
+  let elements = document.getElementsByClassName('category-link');
+  for (el of elements) {
+    el.setAttribute('fs-cmsfilter-field', 'tag');
+  }
+})();
+</script><script src="../../cdn.prod.website-files.com/6053a5b7250a503b3254324e/6470f5217e03b0faa8a404de/65bd79358c6bd575c816f4ce/hs_trackcode_25196166-1.0.6.js" type="text/javascript"></script><script src="../../hubspotonwebflow.com/assets/js/form-124.js" type="text/javascript" integrity="sha384-bjyNIOqAKScdeQ3THsDZLGagNN56B4X2Auu9YZIGu+tA/PlggMk4jbWruG/P6zYj" crossorigin="anonymous"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"959728451f982299","version":"2025.6.2","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"5b2dbb67681344b3ad910b697026f867","b":1}' crossorigin="anonymous"></script>
+</body>
+<!-- Mirrored from tripleten.com/blog/?974180c2_page=4 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Jul 2025 14:50:34 GMT -->
+</html>
